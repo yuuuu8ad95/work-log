@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+}
+
+.top-page-header {
+  width: 100vw;
+  padding: 5vh 15vw;
+  background-color: rgb(179, 212, 200);
+}
+
+.search-form {
+  width: 60vw;
+  height: 5vh;
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.search-button {
+  width: 5vh;
+  border: 0;
+  cursor: pointer;
+  background-color: white;
+  padding: 8px;
+}
+
+.search-icon {
+  width: 100%;
+}
+
+.nav {
+  font-size: 15px;
+  display: flex;
+  /*justify-content: space-between;*/
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 1vh 0;
+}
+
+.lists-left {
+  display: flex;
+  list-style: none;
+  align-items:baseline;
+}
+ 
+
+.user-nickname {
+  text-decoration: none;
+  margin-right: 3vw;
+  color: #333333;
+  font-weight: bold;
+}
+
+
+.logout {
+  text-decoration: none;
+  margin-right: 3vw;
+  color: #333333;
+}
+
+.login {
+  text-decoration: none;
+  margin-right: 3vw;
+  color: #333333;
+}
+
+.sign-up {
+  text-decoration: none;
+  color: #333333;
+}
+
+.sns {
+  text-decoration: none;
+  color: #333333;
+  margin-left: 15px;
+}
+
+.sns-login {
+  margin-top: 15px;
+  display:flex;
+  justify-content:space-around;
+}
+
+.facebook-login {
+  color: #333333;
+}
+
+.google-login {
+  color: #333333;
+}
