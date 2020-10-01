@@ -4,7 +4,7 @@
 
 .top-page-header {
   width: 100vw;
-  padding: 5vh 15vw;
+  padding: 3vh 15vw;
   background-color: rgb(179, 212, 200);
 }
 
@@ -28,7 +28,7 @@
 }
 
 .nav {
-  font-size: 15px;
+  font-size: 18px;
   display: flex;
   /*justify-content: space-between;*/
   flex-wrap: wrap;

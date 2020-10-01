@@ -1,0 +1,19 @@
+.indispensable {
+  background: #e04b85;
+  margin-left: 8px;
+  padding: 5px;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.dispensable {
+  background: #575ec0;
+  margin-left: 8px;
+  padding: 5px;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+}
