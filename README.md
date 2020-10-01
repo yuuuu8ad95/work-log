@@ -55,7 +55,7 @@ Things you may want to cover:
 | ------------------- | ---------- | ----------------------------- |
 | data                | string     | null: false                   |
 | title               | string     | null: false                   |
-| day                 | string     | null: false                   |
+| date                | datetime   | null: false                   |
 | content             | text       | null: false                   |
 
 ### Association
