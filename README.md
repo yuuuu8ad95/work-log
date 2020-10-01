@@ -41,7 +41,7 @@ Things you may want to cover:
 | prefecture       | integer  | null: false |
 | hobby            | integer  |             |
 | free             | text     |             |
-| images           | string   | null: false |
+| images           | string   |             |
 
 ### Association
 - has_many :documents
