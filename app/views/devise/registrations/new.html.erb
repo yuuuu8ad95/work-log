@@ -68,7 +68,7 @@
       <label class="form-text">担当</label>
       <span class="indispensable">必須</span>
     </div>
-    <%#= f.collection_select(:department_id, Department.all, :id, :name, {}, {class:"select-box", id:"user-prefecture"}) %> 
+    <%= f.collection_select(:department_id, Department.all, :id, :name, {}, {class:"select-box", id:"user-prefecture"}) %> 
   </div>
 
   <div class="form-group">
@@ -96,7 +96,7 @@
       <label class="form-text">出身地</label>
       <span class="indispensable">必須</span>
     </div>
-    <%#= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"select-box", id:"user-prefecture"}) %> 
+    <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"select-box", id:"user-prefecture"}) %> 
   </div>
 
   <div class="form-group">

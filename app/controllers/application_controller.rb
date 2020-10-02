@@ -10,8 +10,9 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:sign_up, keys: [:family_name])
     devise_parameter_sanitizer.permit(:sign_up, keys: [:first_name_kana])
     devise_parameter_sanitizer.permit(:sign_up, keys: [:family_name_kana])
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:department_id])
     devise_parameter_sanitizer.permit(:sign_up, keys: [:birthday])
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:prefecture])
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:prefecture_id])
     devise_parameter_sanitizer.permit(:sign_up, keys: [:hobby])
     devise_parameter_sanitizer.permit(:sign_up, keys: [:free])
   end

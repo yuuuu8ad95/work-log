@@ -8,4 +8,7 @@ class Department < ActiveHash::Base
     { id: 6, name: '業務' },
     { id: 7, name: 'その他' },
   ]
-  end
+
+  include ActiveHash::Associations
+  has_one :user
+end
