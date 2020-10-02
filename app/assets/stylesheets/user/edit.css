@@ -1,0 +1,24 @@
+.edit-btn {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.edit-red-btn {
+  display: block;
+  border: 2px solid #ff7300;
+  color: #ff7300;
+  font-weight: bold;
+  padding: 10px;
+  font-size: 30px;
+  width: 100%;
+  line-height: 48px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.edit-red-btn:hover{
+  background-color: #ff7300;
+  border-color: #ff7300;
+  color: white;
+}

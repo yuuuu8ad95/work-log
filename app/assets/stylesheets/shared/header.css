@@ -8,29 +8,10 @@
   background-color: rgb(179, 212, 200);
 }
 
-.search-form {
-  width: 60vw;
-  height: 5vh;
-  display: flex;
-  margin-bottom: 5px;
-}
-
-.search-button {
-  width: 5vh;
-  border: 0;
-  cursor: pointer;
-  background-color: white;
-  padding: 8px;
-}
-
-.search-icon {
-  width: 100%;
-}
-
 .nav {
-  font-size: 15px;
+  font-size: 18px;
   display: flex;
-  /*justify-content: space-between;*/
+  justify-content: flex-end;
   flex-wrap: wrap;
   width: 100%;
   padding: 1vh 0;
@@ -38,14 +19,12 @@
 
 .lists-left {
   display: flex;
-  list-style: none;
-  align-items:baseline;
+  list-style: none;  
 }
- 
 
 .user-nickname {
   text-decoration: none;
-  margin-right: 3vw;
+  margin-right: 40vw;
   color: #333333;
   font-weight: bold;
 }

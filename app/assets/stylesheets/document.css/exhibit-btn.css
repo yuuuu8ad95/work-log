@@ -3,14 +3,14 @@
   background: skyblue;
   text-align: center;
   border-radius: 10%;
-  top: 250px;
+  top: 300px;
   right: 32px;
   position: fixed;
   padding: 5px;
 }
 
 .document-btn-text {
-  color: rgb(22, 4, 185);
+  color: rgb(91, 84, 155);
   display: block;
   font-size: 18px;
   text-decoration: none;

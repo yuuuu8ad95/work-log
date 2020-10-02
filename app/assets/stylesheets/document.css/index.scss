@@ -1,6 +1,34 @@
 .title-content {
-  padding: 5vh 15vw;
+  padding-top: 10px;
   text-align: center;
-  font-size: 4vh;
+  font-size: 5vh;
   font-weight: bold;
+  position: fixed;
+  left: 50%;
+}
+
+.search-form {
+  width: 60vw;
+  height: 5vh;
+  display: flex;
+  position: fixed;
+  top: 30%;
+  left: 10%;
+
+}
+
+.search-form>.input-box {
+  padding-left: 10px;
+}
+
+.search-button {
+  width: 5vh;
+  border: 0;
+  cursor: pointer;
+  background-color: white;
+  padding: 8px;
+}
+
+.search-icon {
+  width: 100%;
 }

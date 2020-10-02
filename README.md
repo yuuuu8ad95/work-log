@@ -37,11 +37,12 @@ Things you may want to cover:
 | family_name      | string   | null: false |
 | first_name_kana  | string   | null: false |
 | family_name_kana | string   | null: false |
+| department       | integer  | null: false |
 | birthday         | date     | null: false |
 | prefecture       | integer  | null: false |
 | hobby            | integer  |             |
 | free             | text     |             |
-| images           | string   | null: false |
+| images           | string   |             |
 
 ### Association
 - has_many :documents
@@ -55,7 +56,7 @@ Things you may want to cover:
 | ------------------- | ---------- | ----------------------------- |
 | data                | string     | null: false                   |
 | title               | string     | null: false                   |
-| day                 | string     | null: false                   |
+| date                | date       | null: false                   |
 | content             | text       | null: false                   |
 
 ### Association
