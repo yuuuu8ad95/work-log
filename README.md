@@ -52,12 +52,14 @@ Things you may want to cover:
 
 ## documentsテーブル
  
-| Column              | Type       | Options                       |
-| ------------------- | ---------- | ----------------------------- |
-| data                | string     | null: false                   |
-| title               | string     | null: false                   |
-| date                | date       | null: false                   |
-| content             | text       | null: false                   |
+| Column        | Type       | Options                  |
+| ------------- | ---------- | ------------------------ |
+| title         | string     | null: false              |
+| content       | text       | null: false              |
+| date          | date       | null: false              |
+| deadline      | date       | null: false              |
+| user          | references | foreign_key :true        |
+
 
 ### Association
 - belongs_to :user

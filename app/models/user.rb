@@ -8,6 +8,7 @@ class User < ApplicationRecord
   belongs_to_active_hash :department
   belongs_to_active_hash :prefecture
   has_one_attached :image
+  has_many :documents
 
   validates :password, format: { with: /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i }
 
