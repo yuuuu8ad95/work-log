@@ -16,6 +16,11 @@ class DocumentsController < ApplicationController
     end
   end
 
+  def show
+    @document = Document.new
+    @document = Document.find(params[:id])
+  end
+
   private
 
   def document_params

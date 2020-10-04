@@ -11,28 +11,29 @@
 }
 
 
-table{
-  width: 70%;
-  margin:  60px auto;
-
-
+.document-info {
+  width: 60%;
+  margin:  50px auto;
 }
 
-table th{
-  padding : 10px 5px;
+.info-title {
+  padding : 5px;
+  text-align: center; 
+  background-color: #ebf9ff;
 }
 
-table td{
+.info-content {
   padding : 20px 10px;
+  text-align: center; 
 }
 
-th,td{
-  border:solid 2px #aaaaaa;
+.info-title,.info-content {
+  border:solid 2px #252525;
 }
 
 
 .document-title {
-  font-size: 20px;
+  font-size: 5px;
 }
 
 
