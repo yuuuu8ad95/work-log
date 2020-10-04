@@ -1,0 +1,37 @@
+.documents-create-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10vh 0;
+}
+
+.new-document-detail {
+  font-size: 40px;
+  color: #666;
+  padding: 10px;
+  width: 70%; 
+  color: #666;
+  text-align: center;
+}
+
+
+.detail-document {
+  word-break : break-all;
+  text-align: center;
+}
+
+.detail-contents {
+  height: 300px;
+  padding: 20px 10px;
+}
+
+.detail-title, .detail-content{
+  padding: 20px 10px;
+}
+
+.detail-title, .detail-content, .detail-contents {
+  font-size: 20px;
+  background-color: #fff; 
+  border: solid 1px rgb(104, 104, 104); 
+}
+

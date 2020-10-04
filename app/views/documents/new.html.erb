@@ -19,7 +19,7 @@
       標題
       <span class="indispensable">必須</span>
     </div>
-    <%= f.text_area :title, class:"document-form-title", id:"dleoocument-title", placeholder:"標題（40文字まで)", maxlength:"40" %>
+    <%= f.text_area :title, class:"document-form-title", id:"dleoocument-title", placeholder:"標題（30文字まで)", maxlength:"30" %>
   </div>
 
   <div class="documents-content">
@@ -30,12 +30,12 @@
     <%= f.text_area :content, class:"document-form-content", id:"document-content"  %>
   </div>
 
-  <div class="documents-daadline">
+  <div class="documents-deadline">
     <div class="weight-bold-text">
     期限
       <span class="indispensable">必須</span>
     </div>
-    <%= f.date_field :deadline, class: 'documents-daadline', id: 'deadline' %>
+    <%= f.date_field :deadline, class: 'documents-deadline', id: 'deadline' %>
   </div>
 
   <div class='create-btn-contents'>

@@ -1,0 +1,36 @@
+<%= render "shared/header" %>
+
+<div class="documents-create-main">
+
+  <div class="new-document-detail">
+    <h2 class="name">
+      <%= @document.title %>
+    </h2>
+  </div>
+
+  <div class='detail-table'>
+      <table class='detail-document'>
+        <tr>
+          <th class="detail-contents">内容</th>
+          <th class="detail-contents"><%= @document.content %></th>
+        </tr>
+        <tr>
+          <th class="detail-title">投稿日</th>
+          <th class="detail-content"><%= @document.created_at.strftime('%Y/%m/%d') %></th>
+        </tr>
+        <tr>
+          <th class="detail-title">担当</th>
+          <th class="detail-content"><%= @document.user.department.name %></th>
+        </tr>   
+          <th class="detail-title">投稿者</th>
+          <th class="detail-content"><%= @document.user.first_name %><%= @document.user.family_name %></th>
+        </tr>  
+        <tr>
+          <th class="detail-title">期限</th>
+          <th class="detail-content"><%= @document.deadline %></th>
+        </tr>
+      </table>
+     
+  </div>
+
+</div>
