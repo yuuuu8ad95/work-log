@@ -1,5 +1,6 @@
 class DocumentsController < ApplicationController
   def index
+    @documents = Document.all.order('created_at DESC')
   end
 
   def new
@@ -18,6 +19,6 @@ class DocumentsController < ApplicationController
   private
 
   def document_params
-    params.require(:document).permit(:title, :content, :deadline).merge(user_id: current_user.id)
+    params.require(:document).permit(:create_day, :title, :content, :deadline).merge(user_id: current_user.id)
   end
 end

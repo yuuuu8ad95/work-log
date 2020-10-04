@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 2020_10_02_142113) do
   end
 
   create_table "documents", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.date "create_day", null: false
     t.string "title", null: false
     t.text "content", null: false
     t.date "deadline", null: false
