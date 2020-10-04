@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   get 'documents/index'
   root to: "documents#index"
   resources :users, only: [:edit, :update]
+  resources :documents
 end

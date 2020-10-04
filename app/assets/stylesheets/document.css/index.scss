@@ -1,20 +1,45 @@
 .title-content {
-  padding-top: 10px;
+  padding: 30px;
   text-align: center;
   font-size: 5vh;
   font-weight: bold;
-  position: fixed;
-  left: 50%;
 }
+
+.document-info {
+  text-align: center;
+  overflow-x : auto
+}
+
+
+table{
+  width: 70%;
+  margin:  60px auto;
+
+
+}
+
+table th{
+  padding : 10px 5px;
+}
+
+table td{
+  padding : 20px 10px;
+}
+
+th,td{
+  border:solid 2px #aaaaaa;
+}
+
+
+.document-title {
+  font-size: 20px;
+}
+
 
 .search-form {
   width: 60vw;
   height: 5vh;
-  display: flex;
-  position: fixed;
-  top: 30%;
-  left: 10%;
-
+  text-align: center;
 }
 
 .search-form>.input-box {

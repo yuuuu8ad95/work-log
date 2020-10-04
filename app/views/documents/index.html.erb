@@ -1,7 +1,11 @@
 <%= render "shared/header" %>
 <div class='main'>
 
-  <div class='search-bar-contents'>
+  <div class='title-content'>
+    <h1>投稿一覧</h1>
+  </div>
+
+   <div class='search-bar-contents'>
     <form class="search-form" action="#">
       <input class='input-box' placeholder='キーワードから探す'>
       <button class="search-button">
@@ -10,20 +14,36 @@
     </form>
   </div>  
 
-  <div class='title-content'>
-    <h2>投稿一覧</h2>
+  <div class='document-lists'>
+      <table class='document-info'>
+       <thead>
+          <tr>
+            <th>標題</th>
+            <th>投稿者</th>
+            <th>日付</th>
+          </tr>
+       </thead>
+            <% @documents.each do |document| %>
+        <tbody>
+          <tr>    
+            <td><%= document.title %></td>
+            <td><%= document.user.nickname %></td>
+            <td><%= document.created_at.strftime('%Y/%m/%d') %></td>
+            <% end %>
+          </tr>
+        </tbody>
+      </table>
+    
   </div>
 
+ 
 
- <%= link_to "/" do %>
+  <%= link_to new_document_path do %>
   <div class='document-btn'>
    <span class='document-btn-text'>新規作成</span>
      <%= image_tag 'report.png' , size: '50x80' ,class:"document-btn-icon" %>
   </div>
   <% end %>
-
-
-
 
 
 </div>
