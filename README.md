@@ -1,10 +1,10 @@
-# Work-log
+[![Image from Gyazo](https://i.gyazo.com/4159a16bc80d09c31fd1ac2152b30420.png)](https://gyazo.com/4159a16bc80d09c31fd1ac2152b30420)
 
 
 ## 概要
 仕事や活動内容の見える化、情報管理やコミュニケーションツールとしてのアプリケーション
 
-##制作背景（意図）
+## 制作背景（意図）
 クラウドサービスでは1人1アカウントの登録にはコストがかかり、メンバー全員のアカウントを持つことが難しいことがあります。
 また、過去の情報や活動を個人で管理をしたり、メールや電話などで伝達することで、
 仕事情報の管理や伝え漏れをなくし、効率的に仕事や活動ができるアプリケーションの作成に取り組みました。
@@ -12,10 +12,14 @@
 
 ### 実装機能
 ユーザー管理機能
-新規登録、ログイン、ログアウト、アカウント編集ができるように設定しました。
+新規登録、ログイン、ログアウト、アカウント編集ができるように設定
+[![Image from Gyazo](https://i.gyazo.com/237900a698a1ffbabfd12563aec67a30.png)](https://gyazo.com/237900a698a1ffbabfd12563aec67a30)
 
 投稿機能（新規作成・一覧表示・詳細表示）
-記録したい情報の管理や提出物、掲示板として記事が投稿できるように設定しました。
+記録したい情報の管理や提出物、掲示板として記事が投稿、一覧表示できるように設定
+[![Image from Gyazo](https://i.gyazo.com/6bf4b470c43aecc546057cbbaaa7f7b3.png)](https://gyazo.com/6bf4b470c43aecc546057cbbaaa7f7b3)
+
+[![Image from Gyazo](https://i.gyazo.com/5c8f1d616dca32a34ac0c6bf31d00d08.png)](https://gyazo.com/5c8f1d616dca32a34ac0c6bf31d00d08)
 
 ### 実装予定
 マイページ機能
@@ -33,8 +37,11 @@ SNS連携機能
 そのまま利用できるようにします。
 
 
+# ER図
 
-# DB計
+[![Image from Gyazo](https://i.gyazo.com/24938f78cf4476e5dd0fea30b2ced212.png)](https://gyazo.com/24938f78cf4476e5dd0fea30b2ced212)
+
+# DB設計
 
 
 ## usersテーブル
