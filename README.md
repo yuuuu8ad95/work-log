@@ -1,29 +1,40 @@
-# README
+# Work-log
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+## 概要
+仕事や活動内容の見える化、情報管理やコミュニケーションツールとしてのアプリケーション
 
-* Ruby version
+##制作背景（意図）
+クラウドサービスでは1人1アカウントの登録にはコストがかかり、メンバー全員のアカウントを持つことが難しいことがあります。
+また、過去の情報や活動を個人で管理をしたり、メールや電話などで伝達することで、
+仕事情報の管理や伝え漏れをなくし、効率的に仕事や活動ができるアプリケーションの作成に取り組みました。
 
-* System dependencies
 
-* Configuration
+### 実装機能
+ユーザー管理機能
+新規登録、ログイン、ログアウト、アカウント編集ができるように設定しました。
 
-* Database creation
+投稿機能（新規作成・一覧表示・詳細表示）
+記録したい情報の管理や提出物、掲示板として記事が投稿できるように設定しました。
 
-* Database initialization
+### 実装予定
+マイページ機能
+ユーザー管理機能の追加機能として自己紹介ができるようなページを作成予定です。
 
-* How to run the test suite
+投稿機能（編集、削除、タグ付き）
+投稿内容の編集や削除ができる機能を追加します。
+また、投稿内容を連絡、日報、イベントなど、タグをつけることで振り分けるように設定する予定です。
 
-* Services (job queues, cache servers, search engines, etc.)
+コメント機能
+投稿内容について、質問やアドバイスができるようにします。
 
-* Deployment instructions
+SNS連携機能
+メールアドレス、パスワードを新しく設定しなくても、googleやFacebookのアカウントを持っている人は、
+そのまま利用できるようにします。
 
-* ...
 
-# テーブル設計
+
+# DB計
 
 
 ## usersテーブル
