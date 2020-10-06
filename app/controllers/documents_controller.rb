@@ -41,10 +41,7 @@ class DocumentsController < ApplicationController
     else
       redirect_to document_path
     end
-  end 
-
-
-
+  end
 
   private
 

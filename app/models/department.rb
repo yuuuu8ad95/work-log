@@ -6,7 +6,7 @@ class Department < ActiveHash::Base
     { id: 4, name: '経理' },
     { id: 5, name: '総務' },
     { id: 6, name: '業務' },
-    { id: 7, name: 'その他' },
+    { id: 7, name: 'その他' }
   ]
 
   include ActiveHash::Associations

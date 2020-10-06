@@ -13,13 +13,13 @@ AllCops:
 # 1行あたりの文字数をチェックする
 Layout/LineLength:
  Max: 130
-# 下記ファイルはチェックの対象から外す
+# 下記ファイルはチェックの対象外
  Exclude:
    - "Rakefile"
    - "spec/rails_helper.rb"
    - "spec/spec_helper.rb"
 
-# RSpecは1つのブロックあたりの行数が多くなるため、チェックの除外から外す
+# RSpecは1つのブロックあたりの行数が多く、エラー判別するので、チェックから除外
 # ブロック内の行数をチェックする
 Metrics/BlockLength:
  Exclude:
@@ -33,8 +33,6 @@ Metrics/AbcSize:
  Max: 50
 
 # メソッドの中身が複雑になっていないか、Rubocopが計算して基準値を超えると警告を出す
-Metrics/PerceivedCompl
-
 Metrics/PerceivedComplexity:
  Max: 8
 
@@ -42,7 +40,7 @@ Metrics/PerceivedComplexity:
 Metrics/CyclomaticComplexity:
  Max: 10
 
-# メソッドの行数が多すぎないかをチェック
+# メソッドの行数が多すぎないかチェック
 Metrics/MethodLength:
  Max: 30
 
@@ -67,11 +65,11 @@ Style/AsciiComments:
  Enabled: false
 
 # クラスやモジュール定義前に、それらの説明書きがあるかをチェック（無効）
-
 Style/Documentation:
  Enabled: false
 
-# ％i（）構文を使用していないシンボルで構成される配列リテラルをチェック（無効）
+# ％i（）構文を使用していないシンボルで構成される配列リテラルをチェック
+# 無効にする
 Style/SymbolArray:
  Enabled: false
 
