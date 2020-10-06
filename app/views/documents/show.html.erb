@@ -32,7 +32,7 @@
         <% if user_signed_in? && current_user.id == @document.user.id %>
         <tr>
           <th class='detail-title'>管理者</th>
-          <th class='detail-content'><%= link_to "編集", edit_document_path(@document.id) %></th>
+          <th class='detail-content-edit'><%= link_to "編集", edit_document_path(@document.id) %><%= link_to "削除", document_path(@document.id), method: :delete %></th>
         </tr>
         <% end %>
       </table>
