@@ -36,6 +36,18 @@ class DocumentsController < ApplicationController
     end
   end
 
+  def destroy
+    @document = Document.find(params[:id])
+    if @document.destroy
+      redirect_to root_path
+    else
+      redirect_to document_path
+    end
+  end 
+
+
+
+
   private
 
   def document_params
