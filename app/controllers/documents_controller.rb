@@ -1,6 +1,8 @@
 class DocumentsController < ApplicationController
   before_action :move_to_index, except: [:index, :show]
   before_action :authenticate_user!, except: [:index]
+  before_action :set_document, only: [:show, :edit, :update, :destroy]
+
   def index
     @documents = Document.all.order('created_at DESC')
   end
@@ -20,15 +22,12 @@ class DocumentsController < ApplicationController
 
   def show
     @document = Document.new
-    @document = Document.find(params[:id])
   end
 
   def edit
-    @document = Document.find(params[:id])
   end
 
   def update
-    @document = Document.find(params[:id])
     if @document.update(document_params)
       redirect_to document_path(@document.id)
     else
@@ -37,7 +36,6 @@ class DocumentsController < ApplicationController
   end
 
   def destroy
-    @document = Document.find(params[:id])
     if @document.destroy
       redirect_to root_path
     else
@@ -57,4 +55,8 @@ end
 
 def move_to_index
   redirect_to new_user_session_path unless user_signed_in?
+end
+
+def set_document
+  @document = Document.find(params[:id])
 end
