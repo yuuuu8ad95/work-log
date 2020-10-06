@@ -21,17 +21,17 @@
             <th class='info-title'>標題</th>
             <th class='info-title'>投稿者</th>
             <th class='info-title'>日付</th>
-            <th class='info-title'>表示</td>
+            <th class='info-title'>表示</th>
           </tr>
        </thead>
-            <% @documents.each do |document| %>
+        <% @documents.each do |document| %>
         <tbody>
           <tr>    
             <td class='info-content'><%= document.title %></td>
             <td class='info-content'><%= document.user.nickname %></td>
             <td class='info-content'><%= document.created_at.strftime('%Y/%m/%d') %></td>
             <td class='info-content'><%= link_to "表示", document_path(document.id) %></td>
-            <% end %>
+        <% end %>
           </tr>
         </tbody>
       </table>

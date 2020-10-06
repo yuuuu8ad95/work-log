@@ -29,6 +29,12 @@
           <th class="detail-title">期限</th>
           <th class="detail-content"><%= @document.deadline %></th>
         </tr>
+        <% if user_signed_in? && current_user.id == @document.user.id %>
+        <tr>
+          <th class='detail-title'>管理者</th>
+          <th class='detail-content'><%= link_to "編集", edit_document_path(@document.id) %></th>
+        </tr>
+        <% end %>
       </table>
      
   </div>
