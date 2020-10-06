@@ -1,0 +1,47 @@
+<%= render "shared/header" %>
+
+<div class="documents-create-main">
+  <h2 class="documents-createtitle">投稿の編集</h2>
+  <%= form_with model: @document, local: true do |f| %>
+
+  <%= render 'shared/error_messages', model: f.object %>
+
+  <div class="documents-date">
+    <div class="weight-bold-text">
+    投稿日
+      <span class="indispensable">必須</span>
+    </div>
+      <%= f.date_field :create_day, class: 'documents-date', id: 'today' %>
+  </div>
+
+  <div class="new-documents">
+    <div class="weight-bold-text">
+      標題
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.text_area :title, class:"document-form-title", id:"dleoocument-title", placeholder:"標題（30文字まで)", maxlength:"30" %>
+  </div>
+
+  <div class="documents-content">
+    <div class="weight-bold-text">
+      内容
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.text_area :content, class:"document-form-content", id:"document-content"  %>
+  </div>
+
+  <div class="documents-deadline">
+    <div class="weight-bold-text">
+    期限
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.date_field :deadline, class: 'documents-deadline', id: 'deadline' %>
+  </div>
+
+  <div class='create-btn-contents'>
+    <%= f.submit "編集する" ,class:"create-btn" %>
+    <%= link_to '戻る', root_path, class:"back-btn" %>
+  </div>
+
+<% end %>
+</div>
