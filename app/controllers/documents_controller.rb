@@ -21,6 +21,7 @@ class DocumentsController < ApplicationController
   end
 
   def show
+    @comment = Comment.new
     @document = Document.new
     @document = Document.find(params[:id])
   end

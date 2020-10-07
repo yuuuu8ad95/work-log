@@ -90,7 +90,7 @@ SNS連携機能
 | ------------ | --------   | ----------------------------- |
 | text         | text       | null: false                   |
 | user         | references | foreign_key :true             |
-| item         | references | foreign_key :true             |
+| document     | references | foreign_key :true             |
 
 ### Association
 - belongs_to :user

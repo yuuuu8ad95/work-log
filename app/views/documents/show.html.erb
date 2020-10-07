@@ -37,6 +37,36 @@
         <% end %>
       </table>  
   </div>
-</div>
+
+
+  <div class="comment-box">
+  <%= form_with(model: [@document,@comment], local:true) do |f| %>
+    <form>
+      <%= f.text_area :text,  class:"comment-text" %>
+
+      <%= f.submit 'コメントする',class:"comment-btn" do %>
+        <%= image_tag "comment.png" ,class:"comment-flag-icon" ,width:"20",height:"25"%>
+      <% end %>
+    </form>
+  <% end %>
+  </div>
+
+<div class="comment-list">
+    <div class='title-content'>
+      <h2>コメント一覧</h2>
+    </div>
+    <table class="comment-box1">
+    <tbody>
+        <div id ='comments'>
+          <% @document.comments.reverse_each do |comment| %>
+        <tr>
+        <td><%= comment.user.nickname %></td>
+          <td><%= comment.text %></td>
+          <% end %>
+          </div>
+    </tbody>
+    </table>
+  </div>
+
 
 <%= render "shared/footer" %>
