@@ -1,8 +1,5 @@
 class CommentsController < ApplicationController
-  def new
-    @documents = Document.all
-    @document = Dovument.new
-  end
+  before_action :authenticate_user!
 
   def create
     @document = Document.new(comment_params)
