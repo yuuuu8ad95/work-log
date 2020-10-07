@@ -9,6 +9,7 @@ require("@rails/activestorage").start()
 require("channels")
 require("today")
 require("deadline")
+require("channels/comment_channel")
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
