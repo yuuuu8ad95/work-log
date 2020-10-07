@@ -23,7 +23,7 @@
           <th class="detail-content"><%= @document.user.department.name %></th>
         </tr>   
           <th class="detail-title">投稿者</th>
-          <th class="detail-content"><%= @document.user.first_name %><%= @document.user.family_name %></th>
+          <th class="detail-content"><%= @document.user.nickname %>  (<%= @document.user.first_name %><%= @document.user.family_name %>)</th>
         </tr>  
         <tr>
           <th class="detail-title">期限</th>

@@ -29,8 +29,8 @@
     <%= f.submit "ログイン" ,class:"login-red-btn" %>
   </div>
    <div class="sns-login">
-      <%= link_to 'Facebookでログイン', "#", class: "facebook-login", method: :post%>
-      <%= link_to 'Googleでログイン', "#", class: "google-login", method: :post%>
+      <%= link_to 'Facebookでログイン', user_facebook_omniauth_authorize_path, class: "facebook-login", method: :post%>
+      <%= link_to 'Googleでログイン', user_google_oauth2_omniauth_authorize_path, class: "google-login", method: :post%>
    </div>
 </div>
 <% end %>
