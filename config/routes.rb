@@ -3,6 +3,6 @@ Rails.application.routes.draw do
   root to: "documents#index"
   resources :users, only: [:edit, :update]
   resources :documents do
-    resources :comments, only: [:create] 
+    resources :comments 
   end
 end
