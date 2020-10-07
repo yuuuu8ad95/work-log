@@ -2,7 +2,8 @@ class CommentsController < ApplicationController
   before_action :authenticate_user!
 
   def create
-    @document = Document.new(comment_params)
+    @document = Document.find(params[:id])    
+    @comment = @documents.build(comment_params)
   end
 
   private

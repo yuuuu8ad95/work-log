@@ -40,19 +40,14 @@
 
 
   <div class="comment-box">
-  <%= form_with(model: [@document, @comment], local:true) do |f| %>
+  <%= form_with(model: @comment, local:true) do |f| %>
     <form>
       <%= f.text_area :text,  class:"comment-text" %>
+
       <%= f.submit 'コメントする',class:"comment-btn" do %>
         <%= image_tag "comment.png" ,class:"comment-flag-icon" ,width:"20",height:"25"%>
       <% end %>
     </form>
-  </div>
-
-  <div id='comments'>
-    <% @documents.comments.reverse_each do |comment| %>
-      <p><%= comment.text %></p>
-    <% end %>
   </div>
   <% end %>
 </div>
