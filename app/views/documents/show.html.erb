@@ -60,7 +60,6 @@
         <tr>
           <th>投稿者</th>
           <th>内容</th>
-          <th>投稿者のみ</th>
         </tr>
     </thead>
     <tbody>
@@ -68,10 +67,9 @@
           <% @document.comments.reverse_each do |comment| %>
         <tr>
         <td><%= comment.user.nickname %></td>
-        <td><%= comment.text %></td>
+          <td><%= comment.text %></td>
           <% end %>
-        </div>
-        <td><%= link_to "編集", edit_document_path(@document.id) %><%= link_to "削除", document_path(@document.id), method: :delete %></td>
+          </div>
     </tbody>
     </table>
   </div>
