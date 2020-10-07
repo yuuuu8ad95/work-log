@@ -20,25 +20,32 @@
   text-align: center;
 }
 
-.detail-contents {
-  height: 300px;
-  padding: 20px 10px;
-}
 
-.detail-title, .detail-content, .detail-content-edit {
+
+.detail-title, .detail-content, .detail-contents-title, .detail-content-edit {
   text-align: center;
   padding: 20px 10px;
 }
 
-.detail-title, .detail-content, .detail-contents, .detail-content-edit {
+.detail-title, .detail-content, .detail-contents-title, .detail-contents, .detail-content-edit {
   font-size: 20px;
   background-color: #fff; 
   border: solid 1px rgb(104, 104, 104); 
 }
 
+.detail-contents, .detail-content ,.detail-content-edit{
+  min-width:500px;
+}
+
+.detail-contents {
+  text-align: center;
+  height: 300px;
+  padding: 20px 10px;
+}
+
+
 .detail-content-edit {
   display: flex;
   justify-content: space-around;
-
 }
 

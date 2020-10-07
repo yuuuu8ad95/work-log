@@ -11,7 +11,7 @@
   <div class='detail-table'>
       <table class='detail-document'>
         <tr>
-          <th class="detail-contents">内容</th>
+          <th class="detail-contents-title">内容</th>
           <th class="detail-contents"><%= @document.content %></th>
         </tr>
         <tr>
@@ -35,8 +35,8 @@
           <th class='detail-content-edit'><%= link_to "編集", edit_document_path(@document.id) %><%= link_to "削除", document_path(@document.id), method: :delete %></th>
         </tr>
         <% end %>
-      </table>
-     
+      </table>  
   </div>
-
 </div>
+
+<%= render "shared/footer" %>
