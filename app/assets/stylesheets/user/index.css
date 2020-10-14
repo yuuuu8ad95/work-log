@@ -1,0 +1,25 @@
+.form-search-text {
+  font-size: 20px;
+}
+
+.user-info {
+  width: 60%;
+  margin:  50px auto;
+}
+
+.user-title {
+  padding : 5px;
+  text-align: center; 
+  background-color: #fff6eb;
+}
+
+.user-contents {
+  padding : 10px;
+  text-align: center; 
+}
+
+.user-title,.user-contents {
+  border:solid 2px #252525;
+}
+
+
