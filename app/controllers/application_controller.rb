@@ -14,7 +14,8 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:sign_up, keys: [:birthday])
     devise_parameter_sanitizer.permit(:sign_up, keys: [:prefecture_id])
     devise_parameter_sanitizer.permit(:sign_up, keys: [:hobby])
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:free]) # devise_parameter_sanitizer.permit(:sign_up, keys: [:image])
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:free]) 
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:image])
   end
 
   def basic_auth

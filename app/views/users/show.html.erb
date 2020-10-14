@@ -14,7 +14,11 @@
 
   <div class="user-details">
     <div class="user-img">
-        <%= image_tag @user.image if @user.image.attached? %>
+      <% if @user.image.present? %>
+        <%= image_tag @user.image, class:"user-image-show" %>
+      <% else %>
+         <%= image_tag "no_image.png", class:"user-image-show" %>
+      <% end %>
     </div>
   </div>
 

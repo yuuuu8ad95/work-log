@@ -63,7 +63,7 @@ gem 'devise'
 gem 'active_hash'
 
 gem 'mini_magick'
-gem 'image_processing', '~> 1.2'
+gem 'image_processing'
 
 gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
