@@ -38,7 +38,7 @@ class User < ApplicationRecord
     validates :family_name_kana
     validates :department_id, numericality: { other_than: 1, message: 'Select' }
     validates :prefecture_id, numericality: { other_than: 0, message: 'Select' }
-    validates :email, uniqueness: true, format: { with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i }
+    validates :email, uniqueness: { case_sensitive: true }, format: { with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i }
   end
 
   with_options format: { with: /\A[ぁ-んァ-ン一-龥]/ } do
