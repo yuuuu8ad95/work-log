@@ -24,7 +24,7 @@ RSpec.describe User, type: :model do
         expect(@user).to be_valid
       end
 
-      it '誕生日の欄が空の場合でも登録できる' do
+      it '生年月日の欄が空の場合でも登録できる' do
         @user.birthday = ""
         @user.valid?
         expect(@user).to be_valid
@@ -119,6 +119,12 @@ RSpec.describe User, type: :model do
         @user.department_id = ''
         @user.valid?
         expect(@user.errors.full_messages).to include('Department Select')
+      end 
+
+      it '出身地の選択がされていないと登録できない' do
+        @user.prefecture_id = ''
+        @user.valid?
+        expect(@user.errors.full_messages).to include('Prefecture Select')
       end 
     end
   end
