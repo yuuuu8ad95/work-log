@@ -12,6 +12,7 @@ class User < ApplicationRecord
   has_many :documents
   has_many :comments
   has_many :sns_credentials
+  has_one :mark
 
   def update_without_current_password(params, *options)
     params.delete(:current_password)

@@ -81,8 +81,9 @@ https://work-log-28723.herokuapp.com/
 
 ### Association
 - has_many :documents
-- has_many :messages
+- has_many :comments
 - has_many :sns_credentials
+- has_one :mark
 
 
 ## documentsテーブル
@@ -99,6 +100,7 @@ https://work-log-28723.herokuapp.com/
 ### Association
 - belongs_to :user
 - has_many :comments
+- has_one :mark
 
 
 ## commentsテーブル
@@ -112,6 +114,16 @@ https://work-log-28723.herokuapp.com/
 ### Association
 - belongs_to :user
 - belongs_to :document
+
+### Mark
+| Column       | Type       | Options                       |
+| ------------ | --------   | ----------------------------- |
+| user         | references | foreign_key :true             |
+| document     | references | foreign_key :true             |
+
+- belongs_to :user
+- belongs_to :document
+
 
 
 ## sns_credentialsテーブル
