@@ -72,12 +72,12 @@ https://work-log-28723.herokuapp.com/
 | family_name      | string   | null: false |
 | first_name_kana  | string   | null: false |
 | family_name_kana | string   | null: false |
-| department       | integer  | null: false |
+| department_id    | integer  | null: false |
 | birthday         | date     | null: false |
-| prefecture       | integer  | null: false |
+| prefecture_id    | integer  | null: false |
 | hobby            | integer  |             |
 | free             | text     |             |
-| images           | string   |             |
+| image            | string   |             |
 
 ### Association
 - has_many :documents

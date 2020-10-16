@@ -1,0 +1,43 @@
+.user-show-main {
+  background-color: rgb(238, 238, 183);
+  display: flex;
+  justify-content: center;
+}
+
+.user-image-show {
+  height: 500px;
+  width: 500px;
+  border: 2px solid rgb(133, 133, 224);
+  background-color: white;
+  object-fit: contain;
+  margin-right: 40px;
+}
+
+.user-group {
+  display: flex;
+  flex-direction: column;
+  padding : 10px;
+  /*border : double 4px rgb(78, 86, 131) ; */
+}
+
+.user-text {
+  font-size: 2vh;
+  color: black;
+
+}
+
+.user-content {
+  margin-left: 10px;
+  font-size: 3vh;
+  color: black;
+  margin: 10px 0;
+  border-bottom: 2px solid rgb(77, 77, 177);
+
+}
+
+.user-edit-link {
+  margin-left: 100px;
+  color: #000000;
+  font-size: 20px;
+  cursor: pointer;
+}

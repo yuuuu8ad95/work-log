@@ -18,7 +18,7 @@
       <p>
         クリックしてファイルをアップロード
       </p>
-      <%= f.file_field :image, id:"item-image" %>
+      <%= f.file_field :image, id:"user-image-preview" %>
       <div id="image-list"></div>
     </div>
   </div>
@@ -67,8 +67,8 @@
       <span class="indispensable">必須</span>
     </div>
     <div class='input-name-wrap'>
-      <%= f.text_area :first_name, class:"input-name", id:"first-name", placeholder:"例) 松田" %>
-      <%= f.text_area :family_name, class:"input-name", id:"last-name", placeholder:"例) 悠里" %>
+      <%= f.text_area :family_name, class:"input-name", id:"first-name", placeholder:"例) 松田" %>
+      <%= f.text_area :first_name, class:"input-name", id:"last-name", placeholder:"例) 悠里" %>
     </div>
   </div>
 
@@ -88,7 +88,7 @@
       <label class="form-text">担当</label>
       <span class="indispensable">必須</span>
     </div>
-    <%= f.collection_select(:department_id, Department.all, :id, :name, {}, {class:"select-box", id:"user-prefecture"}) %> 
+    <%= f.collection_select(:department_id, Department.all, :id, :name, {}, {class:"select-box", id:"user-department"}) %> 
   </div>
 
   <div class="form-group">
@@ -132,7 +132,7 @@
       <label class="form-text">自由欄</label>
       <span class="dispensable">任意</span>
     </div>
-      <%= f.text_area :free, class:"text-default", id:"hobby", placeholder:"ご自由にお書きください。", maxlength:"300" %>
+      <%= f.text_area :free, class:"text-default", id:"free", placeholder:"ご自由にお書きください。", maxlength:"300" %>
   </div>
 
   <div class='register-btn'>

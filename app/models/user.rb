@@ -13,6 +13,19 @@ class User < ApplicationRecord
   has_many :comments
   has_many :sns_credentials
 
+  def update_without_current_password(params, *options)
+    params.delete(:current_password)
+
+    if params[:password].blank? && params[:password_confirmation].blank?
+      params.delete(:password)
+      params.delete(:password_confirmation)
+    end
+
+    result = update_attributes(params, *options)
+    clean_up_passwords
+    result
+  end
+
   def self.from_omniauth(auth)
     sns = SnsCredential.where(provider: auth.provider, uid: auth.uid).first_or_create
     user = User.where(email: auth.info.email).first_or_initialize(
@@ -27,7 +40,6 @@ class User < ApplicationRecord
   end
 
 
-
   validates :password, format: { with: /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i }
 
   with_options presence: true do
@@ -38,7 +50,7 @@ class User < ApplicationRecord
     validates :family_name_kana
     validates :department_id, numericality: { other_than: 1, message: 'Select' }
     validates :prefecture_id, numericality: { other_than: 0, message: 'Select' }
-    validates :email, uniqueness: true, format: { with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i }
+    validates :email, uniqueness: { case_sensitive: true }, format: { with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i }
   end
 
   with_options format: { with: /\A[ぁ-んァ-ン一-龥]/ } do

@@ -1,0 +1,89 @@
+<%= render "shared/header" %>
+
+<% if user_signed_in? && current_user.id == @user.id %>
+  <%= link_to "編集する", edit_user_path(current_user), class: "user-edit-link" %>
+<% end %>
+
+  <div class='form-header'>
+      <h1 class='form-header-text'>
+        <%= @user.nickname %>の紹介ページ
+      </h1>
+  </div>
+
+<div class="user-show-main">
+
+  <div class="user-group">
+    <div class="user-details">
+      <div class="user-img">
+        <% if @user.image.present? %>
+          <%= image_tag @user.image, class:"user-image-show" %>
+        <% else %>
+          <%= image_tag "no_image.png", class:"user-image-show" %>
+        <% end %>
+      </div>
+    </div>
+    <div class="user-text-wrap">
+      <h2 class="user-text">ニックネーム</h2>
+      <div class="user-content">
+        <%= @user.nickname %>
+      </div>
+    </div>
+
+    <div class="user-text-wrap">
+      <h2 class="user-text">メールアドレス</h2>
+      <div class="user-content">
+        <%= @user.email %>
+      </div>
+    </div>
+      
+    <div class="user-text-wrap">
+      <h2 class="user-text">お名前</h2>
+      <div class="user-content">
+        <%= @user.family_name %><%= @user.first_name %>
+      </div>
+    </div>
+
+    <div class="user-text-wrap">
+      <h2 class="user-text">お名前カナ</h2>
+      <div class="user-content">
+        <%= @user.family_name_kana %><%= @user.first_name_kana %>
+      </div>
+    </div>
+
+    <div class="user-text-wrap">
+      <h2 class="user-text">担当</h2>
+      <div class="user-content">
+        <%= @user.department.name %>
+      </div>
+    </div>
+
+    <div class="user-text-wrap">
+      <h2 class="user-text">生年月日</h2>
+      <div class="user-content">
+        <%= @user.birthday %>
+      </div>
+    </div>
+
+    <div class="user-text-wrap">
+      <h2 class="user-text">出身地</h2>
+      <div class="user-content">
+        <%= @user.prefecture.name %>
+      </div>
+    </div>
+
+    <div class="user-text-wrap">
+      <h2 class="user-text">趣味</h2>
+      <div class="user-content">
+        <%= @user.hobby %>
+      </div>
+    </div>
+
+    <div class="user-text-wrap">
+      <h2 class="user-text">自由欄</h2>
+      <div class="user-content">
+        <%= @user.free %>
+      </div>
+    </div>
+
+  </div>
+</div>
