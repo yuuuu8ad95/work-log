@@ -1,14 +1,12 @@
 .user-show-main {
-  background-image: url("../user_image.jpg");
-  background-size: cover;
-
+  background-color: rgb(238, 238, 183);
   display: flex;
   justify-content: center;
 }
 
 .user-image-show {
-  height: 200px;
-  width: 200px;
+  height: 500px;
+  width: 500px;
   border: 2px solid rgb(133, 133, 224);
   background-color: white;
   object-fit: contain;
@@ -24,17 +22,15 @@
 
 .user-text {
   font-size: 2vh;
-  color: azure;
-  text-shadow:0 0 6px rgb(0, 0, 0);
+  color: black;
 
 }
 
 .user-content {
   margin-left: 10px;
   font-size: 3vh;
-  color: azure;
-  text-shadow:0 0 6px rgb(0, 0, 0);
-  margin-top: 10px;
+  color: black;
+  margin: 10px 0;
   border-bottom: 2px solid rgb(77, 77, 177);
 
 }

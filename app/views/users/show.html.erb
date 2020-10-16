@@ -12,17 +12,16 @@
 
 <div class="user-show-main">
 
-  <div class="user-details">
-    <div class="user-img">
-      <% if @user.image.present? %>
-        <%= image_tag @user.image, class:"user-image-show" %>
-      <% else %>
-         <%= image_tag "no_image.png", class:"user-image-show" %>
-      <% end %>
-    </div>
-  </div>
-
   <div class="user-group">
+    <div class="user-details">
+      <div class="user-img">
+        <% if @user.image.present? %>
+          <%= image_tag @user.image, class:"user-image-show" %>
+        <% else %>
+          <%= image_tag "no_image.png", class:"user-image-show" %>
+        <% end %>
+      </div>
+    </div>
     <div class="user-text-wrap">
       <h2 class="user-text">ニックネーム</h2>
       <div class="user-content">
