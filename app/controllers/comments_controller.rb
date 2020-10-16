@@ -2,11 +2,9 @@ class CommentsController < ApplicationController
   before_action :authenticate_user!
 
   def create
-    @document = Document.find(params[:document_id])    
+    @document = Document.find(params[:document_id])
     @comment = @document.comments.build(comment_params)
-    if @comment.save
-      ActionCable.server.broadcast'comment_channel', content: @comment
-    end
+    ActionCable.server.broadcast 'comment_channel', content: @comment if @comment.save
   end
 
   private

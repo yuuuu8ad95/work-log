@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-
   def index
     @user = User.all
   end
@@ -13,13 +12,12 @@ class UsersController < ApplicationController
 
   def update
     if current_user.update(user_params)
-      sign_in(current_user, :bypass => true)
+      sign_in(current_user, bypass: true)
       redirect_to user_path(current_user)
     else
       render :edit
     end
   end
-
 
   private
 
