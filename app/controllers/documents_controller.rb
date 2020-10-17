@@ -22,6 +22,7 @@ class DocumentsController < ApplicationController
 
   def show
     @comment = Comment.new
+    @mark = Mark.new
     @document = Document.new
     @document = Document.find(params[:id])
   end
