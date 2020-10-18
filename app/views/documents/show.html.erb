@@ -15,6 +15,17 @@
         <th class="detail-contents"><%= @document.content %></th>
       </tr>
       <tr>
+        <th class="detail-title">タグ</th>
+        <th class="detail-content">
+          <ul class="tag">
+          <li class="tag-list">
+            <% @document.tags.each do |tag| %>
+              #<%=tag.name%>
+            <%end%>
+          </li>
+        </ul></th>
+      </tr>
+      <tr>
         <th class="detail-title">投稿日</th>
         <th class="detail-content"><%= @document.created_at.strftime('%Y/%m/%d') %></th>
       </tr>

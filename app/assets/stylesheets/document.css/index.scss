@@ -23,6 +23,14 @@
   font-size: 5px;
 }
 
+.tag {
+  height: 40%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+}
+
 
 .search-form {
   width: 60vw;

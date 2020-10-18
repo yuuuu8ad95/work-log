@@ -2,7 +2,7 @@
 
 <div class="documents-create-main">
   <h2 class="documents-createtitle">新規作成</h2>
-  <%= form_with model: @document, local: true do |f| %>
+  <%= form_with model: @document, url: documents_path, local: true do |f| %>
 
   <%= render 'shared/error_messages', model: f.object %>
 
@@ -19,7 +19,15 @@
       標題
       <span class="indispensable">必須</span>
     </div>
-    <%= f.text_area :title, class:"document-form-title", id:"dleoocument-title", placeholder:"標題（30文字まで)", maxlength:"30" %>
+    <%= f.text_area :title, class:"document-form-title", id:"doocument-title", placeholder:"標題（30文字まで)", maxlength:"30" %>
+  </div>
+
+  <div class="new-documents">
+    <div class="weight-bold-text">
+      タグ
+      <span class="indispensable">任意</span>
+    </div>
+    <%= f.text_area :name, class:"document-form-title", id:"document-title", placeholder:"タグ（10文字まで)", maxlength:"10" %>
   </div>
 
   <div class="documents-content">

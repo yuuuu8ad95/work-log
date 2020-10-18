@@ -9,11 +9,13 @@ class DocumentsController < ApplicationController
 
   def new
     @document = Document.new
+    @document = DocumentsTag.new
   end
 
   def create
-    @document = Document.new(document_params)
-    if @document.save
+    @document = DocumentsTag.new(document_params)
+    if @document.valid?
+      @document.save
       redirect_to root_path
     else
       render :new
@@ -49,7 +51,7 @@ class DocumentsController < ApplicationController
   private
 
   def document_params
-    params.require(:document).permit(:create_day, :title, :content, :deadline).merge(user_id: current_user.id)
+    params.require(:documents_tag).permit(:create_day, :title, :content, :deadline, :name).merge(user_id: current_user.id)
   end
 
   def move_to_index
