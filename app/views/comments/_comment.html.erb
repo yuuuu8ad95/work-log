@@ -20,9 +20,7 @@
           <%= image_tag @document.user.image, class:"comment-image" %>
       </div>
       <div class="chat-space">
-        <%= @document.user.department.name %>
-        <%= @document.user.nickname %> (<%= @document.user.family_name %><%= @document.user.first_name %>)
-        <div class="chat-space", id ='comments'></div>
+        <div class="comment-space", id ='comments'></div>
       </div>
     </div>
 
@@ -32,8 +30,10 @@
       </div>
       <div class="chat-space">
         <%= image_tag @document.user.image, class:"comment-image" %>
-        <%= @document.user.department.name %>
-        <%= @document.user.nickname %> (<%= @document.user.family_name %><%= @document.user.first_name %>)
+        <div class="comment-space">
+          <%= @document.user.department.name %>
+          <%= @document.user.family_name %>
+        </div>
       </div>
       <div class="comment-chat">
         <%= comment.text %>
