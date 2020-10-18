@@ -96,11 +96,12 @@ https://work-log-28723.herokuapp.com/
 | deadline      | date       | null: false              |
 | user          | references | foreign_key :true        |
 
-
 ### Association
 - belongs_to :user
 - has_many :comments
 - has_one :mark
+- has_many :tags, through: :document_tag_relations
+- has_many :document_tag_relations
 
 
 ## commentsテーブル
@@ -115,15 +116,39 @@ https://work-log-28723.herokuapp.com/
 - belongs_to :user
 - belongs_to :document
 
-### Mark
+
+## Marksテーブル
+
 | Column       | Type       | Options                       |
 | ------------ | --------   | ----------------------------- |
 | user         | references | foreign_key :true             |
 | document     | references | foreign_key :true             |
 
+### Association
 - belongs_to :user
 - belongs_to :document
 
+
+## tagsテーブル
+| Column       | Type       | Options                       |
+| ------------ | --------   | ----------------------------- |
+| name         | string     | null:false, uniqueness: true  |
+
+### Association
+- has_many :document_tag_relations
+- has_many :documents, through: :document_tag_relations
+
+
+## document_tag_relationsテーブル
+
+| Column       | Type       | Options                       |
+| ------------ | --------   | ----------------------------- |
+| document     | references | foreign_key :true             |
+| tag          | references | foreign_key :true             |
+
+### Association
+- belongs_to :document
+- belongs_to :tag
 
 
 ## sns_credentialsテーブル
