@@ -15,7 +15,7 @@ class User < ApplicationRecord
   has_many :marks, dependent: :destroy
   has_many :marked_documents, through: :marks, source: :user
   def already_liked?(document)
-    self.marks.exists?(document_id: document.id)
+    marks.exists?(document_id: document.id)
   end
 
   def update_without_current_password(params, *options)

@@ -1,6 +1,4 @@
 class MarksController < ApplicationController
-
-
   def create
     @mark = current_user.marks.create(document_id: params[:document_id])
     redirect_back(fallback_location: root_path)
@@ -12,5 +10,4 @@ class MarksController < ApplicationController
     @mark.destroy
     redirect_back(fallback_location: root_path)
   end
-    
 end

@@ -9,6 +9,4 @@ class Document < ApplicationRecord
     validates :content
     validates :deadline
   end
-
-
 end

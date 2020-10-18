@@ -1,5 +1,4 @@
 require 'rails_helper'
 
-RSpec.describe "Marks", type: :request do
-
+RSpec.describe 'Marks', type: :request do
 end
