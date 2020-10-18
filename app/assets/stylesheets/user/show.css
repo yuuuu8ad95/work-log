@@ -16,8 +16,8 @@
 .user-group {
   display: flex;
   flex-direction: column;
+  align-items: center;
   padding : 10px;
-  /*border : double 4px rgb(78, 86, 131) ; */
 }
 
 .user-text {

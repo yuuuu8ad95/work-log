@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_07_132241) do
+ActiveRecord::Schema.define(version: 2020_10_16_015034) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -54,6 +54,15 @@ ActiveRecord::Schema.define(version: 2020_10_07_132241) do
     t.index ["user_id"], name: "index_documents_on_user_id"
   end
 
+  create_table "marks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "document_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["document_id"], name: "index_marks_on_document_id"
+    t.index ["user_id"], name: "index_marks_on_user_id"
+  end
+
   create_table "sns_credentials", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "provider"
     t.string "uid"
@@ -89,5 +98,7 @@ ActiveRecord::Schema.define(version: 2020_10_07_132241) do
   add_foreign_key "comments", "documents"
   add_foreign_key "comments", "users"
   add_foreign_key "documents", "users"
+  add_foreign_key "marks", "documents"
+  add_foreign_key "marks", "users"
   add_foreign_key "sns_credentials", "users"
 end

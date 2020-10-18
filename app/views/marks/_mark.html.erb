@@ -1,0 +1,13 @@
+<div class="mark-box">
+  <h3>確認数: <%= @document.marks.count %></h3>
+  <% if current_user.marks.find_by(document_id: @document.id) %>
+  <%= button_to "確認解除", document_mark_path(@document), method: :delete, class:"mark-off" %>
+  <% else %>
+    <%= button_to "確認", document_marks_path(@document), class:"mark-on" %>
+  <% end %>
+
+  <% @document.marked_users.each do |user| %>
+  <li><%= user.department.name %>: <%= user.family_name %></li>
+  <% end %>
+  
+<div>

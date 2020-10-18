@@ -10,8 +10,13 @@ class User < ApplicationRecord
   belongs_to_active_hash :prefecture
   has_one_attached :image
   has_many :documents
-  has_many :comments
+  has_many :comments, dependent: :destroy
   has_many :sns_credentials
+  has_many :marks, dependent: :destroy
+  has_many :marked_documents, through: :marks, source: :user
+  def already_liked?(document)
+    self.marks.exists?(document_id: document.id)
+  end
 
   def update_without_current_password(params, *options)
     params.delete(:current_password)
