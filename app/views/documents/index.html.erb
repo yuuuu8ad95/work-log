@@ -31,9 +31,11 @@
             <td class='info-content'>
             <ul class="tag">
               <li class="tag-list">
-                <%document.tags.each do |tag| %>#<%= document.tag.name %><% end %></td>
+                <% document.tags.each do |tag| %>
+                  #<%= tag.name %><% end %>
               </li>
             </ul>
+            </td>
             <td class='info-content'><%= document.user.family_name %></td>
             <td class='info-content'><%= document.created_at.strftime('%Y/%m/%d') %></td>
         <% end %>

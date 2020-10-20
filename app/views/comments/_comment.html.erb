@@ -15,24 +15,18 @@
     <h2>コメント一覧</h2>
   </div>
   <div class="comment-user">
-    <div class="comment-soon">
-      <div class="image-space">
-          <%= image_tag @document.user.image, class:"comment-image" %>
-      </div>
       <div class="chat-space">
         <div class="comment-space", id ='comments'></div>
       </div>
-    </div>
-
     <div class="comment-area">
       <div class="image-space">
         <% @document.comments.reverse_each do |comment| %>
       </div>
       <div class="chat-space">
-        <%= image_tag @document.user.image, class:"comment-image" %>
+        <%= image_tag "talk.png", class:"comment-image" %>
         <div class="comment-space">
-          <%= @document.user.department.name %>
-          <%= @document.user.family_name %>
+          <%= comment.user.department.name %>
+          <%= comment.user.family_name %>
         </div>
       </div>
       <div class="comment-chat">
