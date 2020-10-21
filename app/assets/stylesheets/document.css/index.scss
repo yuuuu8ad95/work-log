@@ -9,12 +9,22 @@
   background-color: #ebf9ff;
 }
 
+.info-title-day {
+  text-align: center; 
+  background-color: #ebf9ff;
+}
+
 .info-content {
   padding : 20px 10px;
   text-align: center; 
 }
 
-.info-title,.info-content {
+.info-content-day, .info-title-day {
+  padding : 0px;
+  text-align: center; 
+}
+
+.info-title,.info-content, .info-content-day, .info-title-day{
   border:solid 2px #252525;
 }
 

@@ -2,7 +2,7 @@
 
 <div class="documents-create-main">
   <h2 class="documents-createtitle">投稿の編集</h2>
-  <%= form_with model: @document, local: true do |f| %>
+  <%= form_with model: @document, url: document_path, local: true do |f| %>
 
   <%= render 'shared/error_messages', model: f.object %>
 
@@ -27,7 +27,6 @@
       タグ
       <span class="indispensable">必須</span>
     </div>
-    <% binding.pry %>
     <%= f.text_area :name, class:"document-form-title", placeholder:"タグ（10文字まで)", maxlength:"10" %>
   </div>
   <div class="seach-result", id="search-result">関連タグ

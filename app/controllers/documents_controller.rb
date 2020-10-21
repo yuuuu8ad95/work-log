@@ -54,7 +54,6 @@ class DocumentsController < ApplicationController
   end
 
 
-
   private
 
   def documents_tag_params
@@ -62,7 +61,7 @@ class DocumentsController < ApplicationController
   end
 
   def document_params
-    params.permit(:create_day,:title, :content, :deadline, :name).merge(user_id: current_user.id)
+    params.permit(:title, :content, :deadline).merge(user_id: current_user.id)
   end
 
   def move_to_index
@@ -70,6 +69,6 @@ class DocumentsController < ApplicationController
   end
 
   def set_document
-    @document = Document.find(params[:id])
+    @document = Document.find_by(id:params[:id])
   end
 end
