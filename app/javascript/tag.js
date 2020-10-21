@@ -1,4 +1,4 @@
-if (location.pathname.match("documents/new")){
+if (location.pathname.match("documents/new") || document.URL.match( /edit/ )) {
   window.addEventListener("load", (e) => {
   const inputElement = document.getElementById("documents_tag_name");
     inputElement.addEventListener("keyup", (e) => {
