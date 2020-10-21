@@ -22,12 +22,14 @@
     <%= f.text_area :title, class:"document-form-title", id:"doocument-title", placeholder:"標題（30文字まで)", maxlength:"30" %>
   </div>
 
-  <div class="new-documents">
+  <div class="tag-field", id='tag-field'>
     <div class="weight-bold-text">
       タグ
       <span class="indispensable">必須</span>
     </div>
-    <%= f.text_area :name, class:"document-form-title", id:"document-title", placeholder:"タグ（10文字まで)", maxlength:"10" %>
+    <%= f.text_area :name, class:"document-form-title", placeholder:"タグ（10文字まで)", maxlength:"10" %>
+  </div>
+  <div id="search-result">
   </div>
 
   <div class="documents-content">

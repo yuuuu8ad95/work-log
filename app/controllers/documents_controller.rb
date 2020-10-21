@@ -28,12 +28,11 @@ class DocumentsController < ApplicationController
     @document = Document.find(params[:id])
   end
 
-  def edit
-    
+  def edit    
   end
 
   def update
-    if @document.update(document_params)
+   if @document.update(document_params)
       redirect_to documents_path
     else
       render :edit
@@ -47,6 +46,14 @@ class DocumentsController < ApplicationController
       redirect_to document_path
     end
   end
+
+  def search
+    return nil if params[:input] == ""
+    tag = Tag.where(['name LIKE ?', "%#{params[:input]}%"] )
+    render json:{ keyword: tag }
+  end
+
+
 
   private
 
