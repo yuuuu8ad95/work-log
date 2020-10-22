@@ -16,9 +16,9 @@ class DocumentsController < ApplicationController
     @document = DocumentsTag.new(documents_tag_params)
     if @document.valid?
       @document.save
-      return redirect_to root_path
+      redirect_to root_path
     else
-      render "new"
+      render 'new'
     end
   end
 
@@ -28,11 +28,11 @@ class DocumentsController < ApplicationController
     @document = Document.find(params[:id])
   end
 
-  def edit    
+  def edit
   end
 
   def update
-   if @document.update(document_params)
+    if @document.update(document_params)
       redirect_to documents_path
     else
       render :edit
@@ -48,16 +48,18 @@ class DocumentsController < ApplicationController
   end
 
   def search
-    return nil if params[:input] == ""
-    tag = Tag.where(['name LIKE ?', "%#{params[:input]}%"] )
-    render json:{ keyword: tag }
-  end
+    return nil if params[:input] == ''
 
+    tag = Tag.where(['name LIKE ?', "%#{params[:input]}%"])
+    render json: { keyword: tag }
+  end
 
   private
 
   def documents_tag_params
-    params.require(:documents_tag).permit(:create_day,:title, :content, :deadline, :name, :tag_ids).merge(user_id: current_user.id)
+    params.require(:documents_tag).permit(
+      :create_day, :title, :content, :deadline, :name, :tag_ids
+    ).merge(user_id: current_user.id)
   end
 
   def document_params
@@ -69,6 +71,6 @@ class DocumentsController < ApplicationController
   end
 
   def set_document
-    @document = Document.find_by(id:params[:id])
+    @document = Document.find_by(id: params[:id])
   end
 end
