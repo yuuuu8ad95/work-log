@@ -77,12 +77,12 @@ IDとパスワードを知っている特定の人しか閲覧できないよう
 メールアドレスやパスワードの入力を省けるようにSNS連携機能
 ローカル環境では設定できていますが、本番環境ではエラーが起きてしまうので、こちらの設定の見直しを予定しています。
 
-デザインや検索など、よりユーザーが利用しやすいように工夫をしていきます。
+全体的にデザインや検索など、よりユーザーが利用しやすいように工夫をしていきます。
 
 
 # ER図
 
-[![Image from Gyazo](https://i.gyazo.com/9ff9a30ea1581af27fe7016ad8a30f6d.png)](https://gyazo.com/9ff9a30ea1581af27fe7016ad8a30f6d)
+[![Image from Gyazo](https://i.gyazo.com/7f336df8094738cdc0c2954e94b809b7.png)](https://gyazo.com/7f336df8094738cdc0c2954e94b809b7)
 
 # DB設計
 
