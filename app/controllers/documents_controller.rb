@@ -5,6 +5,7 @@ class DocumentsController < ApplicationController
 
   def index
     @documents = Document.all.order('created_at DESC')
+    @documents = params[:tag_id].present? ? Tag.find(params[:tag_id]).documents : Document.all
   end
 
   def new
@@ -24,7 +25,6 @@ class DocumentsController < ApplicationController
   def show
     @comment = Comment.new
     @mark = Mark.new
-    #@documents = Document.new
     @document = Document.find(params[:id])
   end
 
@@ -57,7 +57,7 @@ class DocumentsController < ApplicationController
   private
 
   def documents_tag_params
-    params.require(:documents_tag).permit(:create_day,:title, :content, :deadline, :name).merge(user_id: current_user.id)
+    params.require(:documents_tag).permit(:create_day,:title, :content, :deadline, :name, :tag_ids).merge(user_id: current_user.id)
   end
 
   def document_params

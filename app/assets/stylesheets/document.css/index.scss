@@ -44,26 +44,10 @@
   margin-bottom: 10px;
 }
 
-.search-form {
-  width: 60vw;
-  height: 6vh;
+.from-search {
   text-align: center;
 }
 
-.search-form>.input-box {
-  padding-left: 10px;
-}
-
-.search-button {
-  width: 5vh;
-  border: 0;
-  cursor: pointer;
-  background-color: white;
-  padding: 8px;
-}
-
-.search-icon {
-  width: 100%;
-  border: 1px solid black;
-  padding: 2px;
+.from-search-text {
+  font-size: 10px;
 }
