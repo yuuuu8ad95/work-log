@@ -73,3 +73,4 @@ gem 'omniauth-google-oauth2'
 gem "omniauth-rails_csrf_protection"
 
 gem "pry-rails"
+gem "aws-sdk-s3", require: false
