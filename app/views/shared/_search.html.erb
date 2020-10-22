@@ -1,0 +1,13 @@
+<div class="from-search">
+    <div class="search-from-text">
+      <%= form_tag documents_path, method: :get, class: 'search-from' do %>
+          <%= select_tag :tag_id,
+                      options_from_collection_for_select(Tag.all, :id, :name, params[:tag_id]),
+                      {
+                        prompt: 'すべての投稿',
+                        onchange: 'submit(this.form);'
+                      }
+          %>
+      <% end %>
+    </div>
+  </div>

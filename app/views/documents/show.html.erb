@@ -1,5 +1,7 @@
 <%= render "shared/header" %>
 
+ <%= render "shared/search" %>
+
 <div class="documents-create-main">
 
   <div class="new-document-detail">
@@ -15,8 +17,19 @@
         <th class="detail-contents"><%= @document.content %></th>
       </tr>
       <tr>
+        <th class="detail-title">タグ</th>
+        <th class="detail-content">
+          <ul class="tag">
+          <li class="tag-list">
+            <% @document.tags.each do |tag| %>
+              #<%= tag.name %>
+            <%end%>
+          </li>
+        </ul></th>
+      </tr>
+      <tr>
         <th class="detail-title">投稿日</th>
-        <th class="detail-content"><%= @document.created_at.strftime('%Y/%m/%d') %></th>
+        <th class="detail-content"><%= @document.create_day.strftime('%Y/%m/%d') %></th>
       </tr>
       <tr>
         <th class="detail-title">担当</th>
@@ -32,7 +45,7 @@
       <% if user_signed_in? && current_user.id == @document.user.id %>
       <tr>
         <th class='detail-title'>管理者</th>
-        <th class='detail-content-edit'><%= link_to "編集", edit_document_path(@document.id) %><%= link_to "削除", document_path(@document.id), method: :delete %></th>
+        <th class='detail-content-edit'><%= link_to "編集", "#" %><%= link_to "削除", document_path(@document.id), method: :delete %></th>
       </tr>
       <% end %>
     </table>  

@@ -9,12 +9,22 @@
   background-color: #ebf9ff;
 }
 
+.info-title-day {
+  text-align: center; 
+  background-color: #ebf9ff;
+}
+
 .info-content {
   padding : 20px 10px;
   text-align: center; 
 }
 
-.info-title,.info-content {
+.info-content-day, .info-title-day {
+  padding : 0px;
+  text-align: center; 
+}
+
+.info-title,.info-content, .info-content-day, .info-title-day{
   border:solid 2px #252525;
 }
 
@@ -23,25 +33,21 @@
   font-size: 5px;
 }
 
+.tag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
 
-.search-form {
-  width: 60vw;
-  height: 5vh;
+.tag-list{
+  margin-bottom: 10px;
+}
+
+.from-search {
   text-align: center;
 }
 
-.search-form>.input-box {
-  padding-left: 10px;
-}
-
-.search-button {
-  width: 5vh;
-  border: 0;
-  cursor: pointer;
-  background-color: white;
-  padding: 8px;
-}
-
-.search-icon {
-  width: 100%;
+.from-search-text {
+  font-size: 10px;
 }

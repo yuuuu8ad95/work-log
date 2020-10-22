@@ -2,7 +2,7 @@
 
 <div class="documents-create-main">
   <h2 class="documents-createtitle">新規作成</h2>
-  <%= form_with model: @document, local: true do |f| %>
+  <%= form_with model: @document, url: documents_path, local: true do |f| %>
 
   <%= render 'shared/error_messages', model: f.object %>
 
@@ -19,8 +19,28 @@
       標題
       <span class="indispensable">必須</span>
     </div>
-    <%= f.text_area :title, class:"document-form-title", id:"dleoocument-title", placeholder:"標題（30文字まで)", maxlength:"30" %>
+    <%= f.text_field :title, class:"document-form-title", id:"doocument-title", placeholder:"標題（30文字まで)", maxlength:"30" %>
   </div>
+
+  <div class="tag-field", id='tag-field'>
+    <div class="weight-bold-text">
+      タグ
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.text_field :name, class:"document-form-title", placeholder:"タグ（10文字まで)", maxlength:"10" %>
+  </div>
+  <div class="seach-result", id="search-result">
+  </div>
+  <div class="check_box">
+    <span>-過去の関連-</span>
+    <%= f.collection_check_boxes(:tag_ids, Tag.all, :id, :name) do |tag| %>
+     <div>
+       <%= tag.label do %>
+         <%= tag.text %>
+       <% end %>
+     </div>
+   <% end %>
+ </div>
 
   <div class="documents-content">
     <div class="weight-bold-text">

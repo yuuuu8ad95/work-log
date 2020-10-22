@@ -6,7 +6,11 @@ Rails.application.routes.draw do
   root to: "documents#index"
   resources :users, only: [:index, :show, :edit, :update]
   resources :documents do
+    collection do
+      get 'search'
+    end
     resources :comments, only: [:create] 
     resources :marks, only: [:create, :destroy]
   end
+
 end
