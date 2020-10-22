@@ -40,7 +40,9 @@ IDとパスワードを知っている特定の人しか閲覧できないよう
 ### 投稿機能 （新規作成・一覧表示・詳細表示・編集・削除）
 記録したい情報の管理や提出物・掲示板として記事が投稿、一覧表示できるように設定しています。
 
+
 [![Image from Gyazo](https://i.gyazo.com/aa58e5839d11d783fbe3cb2cd199891a.jpg)](https://gyazo.com/aa58e5839d11d783fbe3cb2cd199891a)
+
 
 ### コメント機能と確認機能
 [![Image from Gyazo](https://i.gyazo.com/15a57ffea3483b5e82f08fc7d823ed97.png)](https://gyazo.com/15a57ffea3483b5e82f08fc7d823ed97)
