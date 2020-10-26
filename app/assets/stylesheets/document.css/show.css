@@ -42,6 +42,13 @@
   padding: 20px 10px;
 }
 
+.user-image-document{
+  height: 50px;
+  width: 50px;
+  border: 2px solid rgb(133, 133, 224);
+  object-fit: contain;
+
+}
 
 .detail-content-edit {
   display: flex;

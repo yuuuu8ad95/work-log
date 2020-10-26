@@ -1,19 +1,16 @@
 <%= render "shared/header" %>
 
-<% if user_signed_in? && current_user.id == @user.id %>
-  <%= link_to "編集する", edit_user_path(current_user), class: "user-edit-link" %>
-<% end %>
-
   <div class='form-header'>
       <h1 class='form-header-text'>
         <%= @user.nickname %>のプロフィール
       </h1>
+      <% if user_signed_in? && current_user.id == @user.id %>
+      <%= link_to "編集する", edit_user_path(current_user), class: "user-edit-link" %>
+      <% end %>
   </div>
 
 <div class="user-show-main">
-
   <div class="user-group">
-    <div class="user-details">
       <div class="user-img">
         <% if @user.image.present? %>
           <%= image_tag @user.image, class:"user-image-show" %>
@@ -21,70 +18,40 @@
           <%= image_tag "no_image.png", class:"user-image-show" %>
         <% end %>
       </div>
-    </div>
-    <div class="user-text-wrap">
-      <h2 class="user-text">ニックネーム</h2>
-      <div class="user-content">
-        <%= @user.nickname %>
-      </div>
-    </div>
 
-    <div class="user-text-wrap">
-      <h2 class="user-text">メールアドレス</h2>
-      <div class="user-content">
-        <%= @user.email %>
-      </div>
-    </div>
-      
-    <div class="user-text-wrap">
-      <h2 class="user-text">お名前</h2>
-      <div class="user-content">
-        <%= @user.family_name %><%= @user.first_name %>
-      </div>
-    </div>
+      <table>
+      <tr>
+        <th class="user-text-wrap">ニックネーム</th><td class="user-content"><%= @user.nickname %></td>
 
-    <div class="user-text-wrap">
-      <h2 class="user-text">お名前カナ</h2>
-      <div class="user-content">
-        <%= @user.family_name_kana %><%= @user.first_name_kana %>
-      </div>
-    </div>
+      <tr>
+        <th class="user-text-wrap">メールアドレス</th><td class="user-content"><%= @user.email %></td>
+      </tr>
 
-    <div class="user-text-wrap">
-      <h2 class="user-text">担当</h2>
-      <div class="user-content">
-        <%= @user.department.name %>
-      </div>
-    </div>
+      <tr>
+        <th class="user-text-wrap">名前(読み)</th><td class="user-content"><%= @user.family_name %> <%= @user.first_name %>（<%= @user.family_name_kana %> <%= @user.first_name_kana %>）</td>
+      </tr>
 
-    <div class="user-text-wrap">
-      <h2 class="user-text">生年月日</h2>
-      <div class="user-content">
-        <%= @user.birthday %>
-      </div>
-    </div>
+      <tr>
+        <th class="user-text-wrap">担当</th><td class="user-content"><%= @user.department.name %></td>
+      </tr>
 
-    <div class="user-text-wrap">
-      <h2 class="user-text">出身地</h2>
-      <div class="user-content">
-        <%= @user.prefecture.name %>
-      </div>
-    </div>
+      <tr>
+        <th class="user-text-wrap">生年月日</th><td class="user-content"><%= @user.birthday %></td>
+      </tr>
 
-    <div class="user-text-wrap">
-      <h2 class="user-text">趣味</h2>
-      <div class="user-content">
-        <%= @user.hobby %>
-      </div>
-    </div>
+      <tr>
+        <th class="user-text-wrap">出身地</th><td class="user-content"><%= @user.prefecture.name %></td>
+      </tr>
 
-    <div class="user-text-wrap">
-      <h2 class="user-text">自由欄</h2>
-      <div class="user-content">
-        <%= @user.free %>
-      </div>
-    </div>
+      <tr>
+        <th class="user-text-wrap">趣味</th><td class="user-content"><%= @user.hobby %></td>
+      </tr>
 
+      <tr>
+        <th class="user-text-wrap">自由欄</th><td class="user-content"><%= @user.free %></td>
+      </tr>
+
+      </table> 
   </div>
 </div>
 

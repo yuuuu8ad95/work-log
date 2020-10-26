@@ -36,7 +36,13 @@
         <th class="detail-content"><%= @document.user.department.name %></th>
       </tr>   
         <th class="detail-title">投稿者</th>
-        <th class="detail-content"><%= @document.user.nickname %>  (<%= @document.user.family_name %><%= @document.user.first_name %>)</th>
+          <th class="detail-content"><%= @document.user.family_name %> <%= @document.user.first_name %> 
+          <% if @document.user.image.present? %>
+            <%= image_tag @document.user.image, class:"user-image-document" %>
+          <% else %>
+            <%= image_tag "no_image.png", class:"user-image-document" %>
+          <% end %>
+        </th>
       </tr>  
       <tr>
         <th class="detail-title">期限</th>
@@ -44,7 +50,7 @@
       </tr>
       <% if user_signed_in? && current_user.id == @document.user.id %>
       <tr>
-        <th class='detail-title'>管理者</th>
+        <th class='detail-title'>管理</th>
         <th class='detail-content-edit'><%= link_to "編集", "#" %><%= link_to "削除", document_path(@document.id), method: :delete %></th>
       </tr>
       <% end %>
