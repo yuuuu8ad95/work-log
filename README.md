@@ -9,7 +9,7 @@
 ### App URL
 https://work-log-28723.herokuapp.com/
 ### ID/Pass
-  ID: avtive<br>
+  ID: active<br>
   Pass: hope2021
 ### テスト用アカウント等
 メールアドレス: appleao@sample.com<br>
