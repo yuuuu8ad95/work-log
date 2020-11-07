@@ -1,0 +1,12 @@
+<div class="memo-box">
+  <%= form_with(model: @memo, url: user_memos_path, local:true) do |f| %>
+  <form>
+    <%= f.text_area :text,  class:"memo-text" %>
+    <%= f.submit 'メモする', class:"memo-btn" do %>
+    <% end %>
+  </form>
+  <% end %>
+
+
+
+</div>

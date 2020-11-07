@@ -1,19 +1,28 @@
+.wrapper {
+  display: flex;
+  height: 100%;
+  background-color: rgb(255, 255, 238);
+}
+
+.side_bar {
+  width: 300px;
+  display: flex;
+  justify-content: center;
+}
+
 .user-show-main {
-  margin-top: 20px;
-  background-color: rgb(243, 243, 225);
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  width: calc(100% - 300px);
 }
 
 .user-image-show {
-  height: 350px;
-  width: 350px;
+  height: 30vh;
+  width: 30vh;
   border: 2px solid rgb(133, 133, 224);
   background-color: white;
   object-fit: contain;
-  margin-right: 40px;
 }
 
 .user-group {
@@ -36,7 +45,19 @@
   
 }
 
+
+/*side-barのCSS*/
+
+
 .user-edit-link {
+  margin-right: 50px;
+  color: #000000;
+  font-size: 20px;
+  cursor: pointer;
+  
+}
+
+.user-memo-link {
   margin-right: 50px;
   color: #000000;
   font-size: 20px;

@@ -1,0 +1,10 @@
+<%= link_to "メモする", new_user_memo_path, class: "user-memo-link" %>
+
+<div class="contents row">
+  <% @memos.each do |memo| %>
+      <p><%= memo.text %></p>
+      <span class="name">
+        <%#= user.nickname %>
+      </span>
+  <% end %>
+</div>
