@@ -5,9 +5,9 @@
 }
 
 .side_bar {
-  width: 150px;
-  margin: 20px;
+  margin: 50px;
 }
+
 
 .user-show-main {
   display: flex;
@@ -47,9 +47,12 @@
 
 /*side-barのCSS*/
 
+.user-side-list {
+  margin-left: 20px;
+}
+
 
 .user-edit-link {
-  margin-right: 50px;
   color: #000000;
   font-size: 20px;
   cursor: pointer;
@@ -57,9 +60,12 @@
 }
 
 .user-memo-link {
-  margin-right: 50px;
   color: #000000;
   font-size: 20px;
   cursor: pointer;
   
+}
+
+ul {
+  list-style: none;
 }

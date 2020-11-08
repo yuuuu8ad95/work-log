@@ -1,9 +1,8 @@
 <div class= "user-side-list">
-<ul>
-  </li><% if user_signed_in? && current_user.id == @user.id %>
-    <%= link_to "編集する", edit_user_path(current_user), class: "user-edit-link" %>
-  <% end %><li>
-
-  <li><%= link_to "メモ一覧", user_memos_path(@user.id), class: "user-memo-link" %></li>
-
+  <ul>
+    <% if user_signed_in? && current_user.id == @user.id %>
+    <li><%= link_to "編集する", edit_user_path(current_user), class: "user-edit-link" %></li>
+    <% end %>
+    <li><%= link_to "メモ一覧", user_memos_path(@user.id), class: "user-memo-link" %></li>
+  </ul>
 </div>
