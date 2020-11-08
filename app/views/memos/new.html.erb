@@ -1,12 +1,15 @@
-<div class="memo-box">
-  <%= form_with(model: @memo, url: user_memos_path, local:true) do |f| %>
-  <form>
-    <%= f.text_area :text,  class:"memo-text" %>
-    <%= f.submit 'メモする', class:"memo-btn" do %>
+<%= render "shared/header" %>
+
+<div class="memo-place">
+  <div class="memo-box">
+    <%= form_with(model: [@user, @memo], url: user_memos_path, local:true) do |f| %>
+    <form>
+      <%= f.text_area :text,  class:"memo-box" %>
+      <%= f.submit 'メモする', class:"memo-btn" do %>
+      <% end %>
+    </form>
     <% end %>
-  </form>
-  <% end %>
-
-
-
+  </div>
 </div>
+
+<%= render "shared/footer.second" %>

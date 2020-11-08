@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   }
   root to: "documents#index"
   resources :users, only: [:index, :show, :edit, :update] do
-    resources :memos, only: [:index, :new]
+    resources :memos, only: [:index, :new, :create]
   end
 
   resources :documents do
