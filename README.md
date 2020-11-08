@@ -45,8 +45,7 @@ IDとパスワードを知っている特定の人しか閲覧できないよう
 
 [![Image from Gyazo](https://i.gyazo.com/74b0992e61cbf74974b5c42f5d998810.png)](https://gyazo.com/74b0992e61cbf74974b5c42f5d998810)
 
-登録したユーザーは一覧で表示され、他の方のプロフィールを閲覧可能です。<br>
-今後は、個人にメッセージを投稿できる工夫をしていきます。
+登録したユーザーは一覧で表示され、他の方のプロフィールを閲覧可能です。<br>。
 
 [![Image from Gyazo](https://i.gyazo.com/cb558b5b8a3d4c79585590a29da5149c.png)](https://gyazo.com/cb558b5b8a3d4c79585590a29da5149c)
 
@@ -73,7 +72,7 @@ IDとパスワードを知っている特定の人しか閲覧できないよう
 
 ## 実装予定
 ### マイページ機能
-プロフィールで個人にメッセージを送れるように機能を追加していきます。
+個人のプロフィール画面でメモを残せるように実装します。
 ### SNS連携機能
 メールアドレスやパスワードの入力を省けるようにSNS連携機能
 ローカル環境では設定できていますが、本番環境ではエラーが起きてしまうので、こちらの設定の見直しを予定しています。
@@ -110,6 +109,17 @@ IDとパスワードを知っている特定の人しか閲覧できないよう
 - has_many :comments
 - has_many :sns_credentials
 - has_one :mark
+- has_many :memos
+
+## memosテーブル
+
+| Column       | Type       | Options                       |
+| ------------ | --------   | ----------------------------- |
+| text         | text       | null: false                   |
+| user         | references | foreign_key :true             |
+
+### Association
+- belongs_to :user
 
 
 ## documentsテーブル
@@ -121,6 +131,7 @@ IDとパスワードを知っている特定の人しか閲覧できないよう
 | date          | date       | null: false              |
 | deadline      | date       | null: false              |
 | user          | references | foreign_key :true        |
+
 
 ### Association
 - belongs_to :user

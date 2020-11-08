@@ -1,0 +1,19 @@
+<%= render "shared/header" %>
+
+<%= link_to "メモする", new_user_memo_path, class: "user-memo-link" %>
+
+<div class="memo-place">
+  <div class="memo-contents">
+    <% @memos.each do |memo| %>
+      <div class= "memo-content">
+        <p><%= memo.text %></p>
+        <span class="name">
+        <%= memo.user.nickname %>
+        <%= memo.created_at.strftime('%Y/%m/%d') %>
+        </span>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<%= render "shared/footer.second" %>

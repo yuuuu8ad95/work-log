@@ -1,16 +1,27 @@
+.wrapper {
+  display: flex;
+  height: 100%;
+  background-color: rgb(255, 255, 238);
+}
+
+.side_bar {
+  width: 150px;
+  margin: 20px;
+}
+
 .user-show-main {
-  background-color: rgb(238, 238, 183);
   display: flex;
   justify-content: center;
+  align-items: center;
+  width: calc(100% - 300px);
 }
 
 .user-image-show {
-  height: 500px;
-  width: 500px;
+  height: 30vh;
+  width: 30vh;
   border: 2px solid rgb(133, 133, 224);
   background-color: white;
   object-fit: contain;
-  margin-right: 40px;
 }
 
 .user-group {
@@ -20,24 +31,35 @@
   padding : 10px;
 }
 
-.user-text {
+.user-text-wrap {
   font-size: 2vh;
   color: black;
-
 }
 
-.user-content {
-  margin-left: 10px;
+.user-content  {
   font-size: 3vh;
   color: black;
-  margin: 10px 0;
-  border-bottom: 2px solid rgb(77, 77, 177);
-
+  border-bottom: 1px solid rgb(77, 77, 177);
+  width: 60vh;
+  
 }
 
+
+/*side-barのCSS*/
+
+
 .user-edit-link {
-  margin-left: 100px;
+  margin-right: 50px;
   color: #000000;
   font-size: 20px;
   cursor: pointer;
+  
+}
+
+.user-memo-link {
+  margin-right: 50px;
+  color: #000000;
+  font-size: 20px;
+  cursor: pointer;
+  
 }
