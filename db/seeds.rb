@@ -6,5 +6,4 @@ Tag.create([
   { name: '日報'},
   { name: 'その他'},
   ])
-
   
