@@ -5,14 +5,13 @@
 }
 
 .side_bar {
-  margin: 50px;
+  margin: 0px;
 }
 
 
 .user-show-main {
   display: flex;
   justify-content: center;
-  align-items: center;
   width: calc(100% - 300px);
 }
 
@@ -48,11 +47,14 @@
 /*side-barのCSS*/
 
 .user-side-list {
-  margin-left: 20px;
+  flex-wrap: wrap;
+  width: 300px;
 }
 
 
 .user-edit-link {
+  display: flex;
+  justify-content: center;
   color: #000000;
   font-size: 20px;
   cursor: pointer;
@@ -69,3 +71,27 @@
 ul {
   list-style: none;
 }
+
+/*memo一覧*/
+
+.user-memo-place {
+  display: flex;
+  justify-content: center;
+
+  border: solid 2px rgb(233, 203, 178);
+  border-radius: 10px;
+
+}
+
+.user-memo-information {
+  padding: 0.5em 1em;
+  margin-top: 5px;
+  font-size: 8px;
+}
+
+
+.user-memo-information p {
+  font-size: 15px;
+  font-weight: bold;
+}
+

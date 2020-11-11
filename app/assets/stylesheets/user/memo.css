@@ -1,6 +1,13 @@
 .user-memo-link {
   display: flex;
   justify-content: center;
+  margin-top: 50px;
+}
+
+.memo-place {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 .memo-contents {
@@ -17,8 +24,7 @@
   border: solid 2px #6091d3;
   border-radius: 10px;
   width: 200px;
-  height: 200px;
-  
+
 }
 
 .memo-content p {
@@ -26,9 +32,8 @@
   font-weight: bold;
 }
 
-.memo-place {
-  display: flex;
-  justify-content: center;
+.memo-information {
+  margin-top: 5px;
 }
 
 .memo-box {

@@ -3,6 +3,17 @@
     <% if user_signed_in? && current_user.id == @user.id %>
     <li><%= link_to "編集する", edit_user_path(current_user), class: "user-edit-link" %></li>
     <% end %>
-    <li><%= link_to "メモ一覧", user_memos_path(@user.id), class: "user-memo-link" %></li>
+    <li><%= link_to "メモ一覧", "/users/#{@user.id}/memos", class: "user-memo-link" %>
   </ul>
+
+    <div class="user-memo-place">
+      <div class="user-memo-contents">
+        <% @user.memos.last(10).each do |memo| %>
+          <div class="user-memo-information">
+            <%= memo.created_at.strftime('%Y/%m/%d') %>
+            <p><%= memo.text %></p>
+          </div>
+        <% end %>
+      </div>
+    </div>
 </div>

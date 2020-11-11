@@ -7,10 +7,10 @@
     <% @memos.each do |memo| %>
       <div class= "memo-content">
         <p><%= memo.text %></p>
-        <span class="name">
+        <div class="memo-information">
         <%= memo.user.nickname %>
         <%= memo.created_at.strftime('%Y/%m/%d') %>
-        </span>
+        </div>
       </div>
     <% end %>
   </div>
