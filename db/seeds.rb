@@ -11,7 +11,7 @@ Tag.create([
     [
       {
         nickname: 'リンゴ',
-        email: 'tappleao@sample.com',
+        email: 'appleao@sample.com',
         password: 'password1234',
         password_confirmation: 'password1234',
         first_name: '緑',

@@ -220,7 +220,7 @@ IDとパスワードを知っている特定の人しか閲覧できないよう
 
 | Column       | Type       | Options                       |
 | ------------ | --------   | ----------------------------- |
-| visiter_id   | integer    | null: false                   |
+| visitor_id   | integer    | null: false                   |
 | visited_id   | integer    | null: false                   |
 | document_id  | integer    |                               |
 | comment_id   | integer    |                               |
