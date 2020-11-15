@@ -1,0 +1,27 @@
+
+.notification-list{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.notification-text{
+  background-color: lightgray;
+  padding: 0.5em 1em;
+  margin: 2em 0;
+  color: #232323;
+  background: #fff8e8;
+  border-left: solid 10px #ffc06e;
+  width: 50%
+}
+
+.comment-notification {
+  color: #163057;
+  font-weight: bold;
+  margin-left: 50px;
+}
+
+.moderate-font {
+  font-size: 15px;
+  color: red;
+}

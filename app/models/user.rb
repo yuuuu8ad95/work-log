@@ -13,6 +13,8 @@ class User < ApplicationRecord
   has_many :comments, dependent: :destroy
   has_many :sns_credentials
   has_many :memos
+  has_many :active_notifications, class_name: 'Notification', foreign_key: 'visitor_id', dependent: :destroy
+  has_many :passive_notifications, class_name: 'Notification', foreign_key: 'visited_id', dependent: :destroy
   has_many :marks, dependent: :destroy
   has_many :marked_documents, through: :marks, source: :user
   def already_liked?(document)

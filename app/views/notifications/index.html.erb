@@ -1,0 +1,35 @@
+<header class='top-page-header'>
+  <div class="top-header">
+    <%= link_to "work log", root_path, class:"top-link"%>
+  </div>
+  
+  <div class='nav'>
+    <ul class='lists-right'>
+      <li><%= link_to current_user.nickname, user_path(current_user), class: "user-link" %></li>
+      </li>
+      <li>
+        <%= link_to "通知", notifications_path, class: "btn-default" %>
+     </li>
+      <li><%= link_to "ユーザーリスト", users_path, class: "user-link" %></li>
+      <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "user-link" %></li>
+    </ul>
+  </div>
+</header>
+
+<div class='form-header'>
+  <h1 class='form-header-text'>通知一覧</h1>
+</div>
+
+<div class='notification-list'>
+    <div class="notification-text">
+    <% if @notifications.exists? %>
+        <div class="users-index">
+            <%= render @notifications %>
+        </div>
+    <% else %>
+        <p>通知はありません</p>
+    <% end %>
+    </div>
+</div>
+
+<%= render "shared/footer.second" %>

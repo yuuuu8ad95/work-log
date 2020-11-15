@@ -38,56 +38,61 @@ IDとパスワードを知っている特定の人しか閲覧できないよう
 ### ユーザー管理機能
 一人一人が新規登録、ログイン、ログアウト、アカウント編集ができるように設定しています。
 
-[![Image from Gyazo](https://i.gyazo.com/237900a698a1ffbabfd12563aec67a30.png)](https://gyazo.com/237900a698a1ffbabfd12563aec67a30)
+<img src="https://i.gyazo.com/237900a698a1ffbabfd12563aec67a30.png" width="600"> 
 
 担当部署を選択でき、また自己紹介ができる趣味や自由欄、画像を投稿できます。
 こちらで登録した情報は、アカウント修正でき、また画像はプレビュー機能を用いて登録する画像確認ができます。
 
-[![Image from Gyazo](https://i.gyazo.com/74b0992e61cbf74974b5c42f5d998810.png)](https://gyazo.com/74b0992e61cbf74974b5c42f5d998810)
+<img src="https://i.gyazo.com/74b0992e61cbf74974b5c42f5d998810.png" width="600"> 
 
 登録したユーザーは一覧で表示され、他の方のプロフィールを閲覧可能です。<br>
 
-[![Image from Gyazo](https://i.gyazo.com/cb558b5b8a3d4c79585590a29da5149c.png)](https://gyazo.com/cb558b5b8a3d4c79585590a29da5149c)
+<img src="https://i.gyazo.com/cb558b5b8a3d4c79585590a29da5149c.png" width="600"> 
+
 
 ### 投稿機能 （新規作成・一覧表示・詳細表示・削除）
 投稿したい情報の管理や提出物・掲示板として記事が投稿、一覧表示できるように設定しています。<br>
 日報で1日1日顧客情報を書くのではなく、顧客ごとに情報をまとめ、他の営業や作業の方から意見をもらえたり情報交換ができるようと<br>
 案件がスムーズに進むことができます。
 
-[![Image from Gyazo](https://i.gyazo.com/ec4bd9ba10c095c8e119cda2f4310423.png)](https://gyazo.com/ec4bd9ba10c095c8e119cda2f4310423)
+<img src="https://i.gyazo.com/ec4bd9ba10c095c8e119cda2f4310423.png" width="600">
+
 
 ### タグ・検索機能
 投稿にタグをつけることができます。<br>
 タグをつけることで、関連した投稿を閲覧できるように設定しています。<br>
 今は、登録したタグでしか検索ができないのですが、今後はユーザーや日にちなど検索を工夫していきます。
 
-[![Image from Gyazo](https://i.gyazo.com/a5023e3bd05d207b845a15c734cb81f8.png)](https://gyazo.com/a5023e3bd05d207b845a15c734cb81f8)
+<img src="https://i.gyazo.com/a5023e3bd05d207b845a15c734cb81f8.png" width="500">
+
 
 ### コメント機能と確認機能
 投稿した記事の詳細表示では、コメント機能と確認機能の実装を行いました。<br>
 投稿した内容についての意見や報告のコメントができ、<br>
 確認機能では、何人の人が確認したか、それは誰かを表示できるようになりました。<br>
 
-[![Image from Gyazo](https://i.gyazo.com/22e569bfc50002e8ea71b1003155530e.png)](https://gyazo.com/22e569bfc50002e8ea71b1003155530e)
+<img src="https://i.gyazo.com/22e569bfc50002e8ea71b1003155530e.png" width="600">
+
 
 ### マイページ機能
-プロフィール機能（右側）とメモ機能（左側）をまとめました。
+プロフィール機能（右側）とメモ機能（左側）をまとめました。<br>
 左側スケジュールの予定や残しておきたい言葉を保存できます。
 
-[![Image from Gyazo](https://i.gyazo.com/ecf9bbacf69033ecbcc493f37b52ac11.png)](https://gyazo.com/ecf9bbacf69033ecbcc493f37b52ac11)
+<img src="https://i.gyazo.com/ecf9bbacf69033ecbcc493f37b52ac11.png" width="600">
 
-特定の人のプロフィールでその人の書いたメモの内容を確認することが可能です。
+特定の人のプロフィールでその人の書いたメモの内容を確認することが可能です。<br>
 また、一覧として全員のメモの内容を確認することもできます。
 
-[![Image from Gyazo](https://i.gyazo.com/591f14fc056371c6e09b48de869e5a60.png)](https://gyazo.com/591f14fc056371c6e09b48de869e5a60)
+<img src="https://i.gyazo.com/591f14fc056371c6e09b48de869e5a60.png" width="600">
+
 
 ## 実装予定
 ### 通知機能
-投稿にコメントがあった場合にTOP画面に通知が届くように設定していきます。
+投稿にコメントがあった場合にTOP画面に通知が届くように設定していきます。<br>
 また、確認やコメントの数を記事一覧で数字を出すようにしていきます。
 
 ### SNS連携機能
-メールアドレスやパスワードの入力を省けるようにSNS連携機能
+メールアドレスやパスワードの入力を省けるようにSNS連携機能<br>
 ローカル環境では設定できていますが、本番環境ではエラーが起きてしまうので、こちらの設定の見直しを予定しています。
 
 全体的にデザインや検索など、よりユーザーが利用しやすいように工夫をしていきます。
@@ -95,7 +100,8 @@ IDとパスワードを知っている特定の人しか閲覧できないよう
 
 # ER図
 
-[![Image from Gyazo](https://i.gyazo.com/7f336df8094738cdc0c2954e94b809b7.png)](https://gyazo.com/7f336df8094738cdc0c2954e94b809b7)
+[![Image from Gyazo](https://i.gyazo.com/1a74bfd4228c6ce8da0bfc6f62b81e15.png)](https://gyazo.com/1a74bfd4228c6ce8da0bfc6f62b81e15)
+
 
 # DB設計
 
@@ -123,6 +129,7 @@ IDとパスワードを知っている特定の人しか閲覧できないよう
 - has_many :sns_credentials
 - has_one :mark
 - has_many :memos
+- has_many :notifications
 
 ## memosテーブル
 
@@ -145,7 +152,6 @@ IDとパスワードを知っている特定の人しか閲覧できないよう
 | deadline      | date       | null: false              |
 | user          | references | foreign_key :true        |
 
-
 ### Association
 - belongs_to :user
 - has_many :comments
@@ -153,6 +159,8 @@ IDとパスワードを知っている特定の人しか閲覧できないよう
 - has_many :marked_users, through: :marks, source: :user
 - has_many :document_tag_relations, dependent: :destroy
 - has_many :tags, through: :document_tag_relations
+- has_many :notifications
+
 
 ## commentsテーブル
 
@@ -206,3 +214,19 @@ IDとパスワードを知っている特定の人しか閲覧できないよう
 
 ### Association
 - belongs_to :user
+
+
+## notificationsテーブル
+
+| Column       | Type       | Options                       |
+| ------------ | --------   | ----------------------------- |
+| visitor_id   | integer    | null: false                   |
+| visited_id   | integer    | null: false                   |
+| document_id  | integer    |                               |
+| comment_id   | integer    |                               |
+| action       | string     | null: false                   |
+| checked      | boolean    | default: false, null: false   |
+
+### Association
+- belongs_to :user
+- belongs_to :document

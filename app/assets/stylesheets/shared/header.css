@@ -47,7 +47,7 @@
   border-bottom: 2px solid #2ac5b3;
 }
 
-.user-link {
+.user-link, .btn-default {
   color: #494b52;
   text-decoration: none;
 }

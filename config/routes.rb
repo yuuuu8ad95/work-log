@@ -16,4 +16,6 @@ Rails.application.routes.draw do
     resources :marks, only: [:create, :destroy]
   end
 
+  resources :notifications, only: [:index]
+
 end

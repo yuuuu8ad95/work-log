@@ -7,6 +7,14 @@
     <ul class='lists-right'>
     <% if user_signed_in? %>
       <li><%= link_to current_user.nickname, user_path(current_user), class: "user-link" %></li>
+      </li>
+        <% if unchecked_notifications.any? %>
+          <i class="star" style="color: #df5e08;">★new</i>
+        <% end %>
+        <li>
+          <%= link_to "通知", notifications_path, class: "btn-default" %>
+        </li>
+      </li>
       <li><%= link_to "ユーザーリスト", users_path, class: "user-link" %></li>
       <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "user-link" %></li>
     <% else %>

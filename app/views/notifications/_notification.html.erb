@@ -1,0 +1,18 @@
+<% visitor = notification.visitor %>
+<% document = notification.document %>
+
+<div class="user-view clearfix ">
+  <%= link_to users_path(notification.visitor) do %>
+    <% if notification.visitor.image.present? %>
+      <%= image_tag notification.visitor.image, class:"user-image-document" %>
+    <% else %>
+      <%= image_tag "no_image.png", class:"user-image-document" %>
+    <% end %>
+  <% end %>
+  <%= notification_form(notification) %><span class="moderate-font"><%= " (#{time_ago_in_words(notification.created_at)} 前)" %></span>
+  <br>
+  <% if !@comment.nil? %>
+    <p class="comment-notification"><%= @comment %></p>
+    <hr>
+  <% end %>
+</div>
