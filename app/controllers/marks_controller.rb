@@ -3,7 +3,6 @@ class MarksController < ApplicationController
     @mark = current_user.marks.create(document_id: params[:document_id])
     redirect_back(fallback_location: root_path)
     @mark.save
-    @document.create_notification_mark!(current_user)
   end
 
   def destroy

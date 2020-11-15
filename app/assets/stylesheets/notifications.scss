@@ -1,3 +1,22 @@
-// Place all the styles related to the notifications controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.notification-list{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.notification-text{
+  background-color: lightgray;
+  padding: 0.5em 1em;
+  margin: 2em 0;
+  color: #232323;
+  background: #fff8e8;
+  border-left: solid 10px #ffc06e;
+  width: 50%
+}
+
+.comment-notification {
+  color: #163057;
+  font-weight: bold;
+  margin-left: 50px;
+}

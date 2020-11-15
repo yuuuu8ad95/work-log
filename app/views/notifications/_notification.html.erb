@@ -3,11 +3,16 @@
 
 <div class="user-view clearfix ">
   <%= link_to users_path(notification.visitor) do %>
-    <%#= image_tag notification.visitor.image[:small].url, :fill,100,100, format: "jpeg", fallback: "no_image.jpg", size: "50x50", class:"profile-img-circle" %>
+    <% if notification.visitor.image.present? %>
+      <%= image_tag notification.visitor.image, class:"user-image-document" %>
+    <% else %>
+      <%= image_tag "no_image.png", class:"user-image-document" %>
+    <% end %>
   <% end %>
   <%= notification_form(notification) %><span class="moderate-font"><%= " (#{time_ago_in_words(notification.created_at)} 前)" %></span>
   <br>
   <% if !@comment.nil? %>
-    <p class="moderate-font text-center" style="color: #C0C0C0;"><%= @comment %></p>
+    <p class="comment-notification"><%= @comment %></p>
+    <hr>
   <% end %>
 </div>
