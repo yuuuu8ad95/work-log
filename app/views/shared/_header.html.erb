@@ -9,7 +9,7 @@
       <li><%= link_to current_user.nickname, user_path(current_user), class: "user-link" %></li>
       </li>
         <% if unchecked_notifications.any? %>
-          <i class="fa fa-circle" style="color: orange;">★</i>
+          <i class="star" style="color: #df5e08;">★new</i>
         <% end %>
         <li>
           <%= link_to "通知", notifications_path, class: "btn-default" %>
