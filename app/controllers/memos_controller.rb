@@ -1,5 +1,4 @@
 class MemosController < ApplicationController
-
   def index
     @memos = Memo.all.order('created_at DESC')
   end
@@ -19,10 +18,8 @@ class MemosController < ApplicationController
   end
 
   private
+
   def memo_params
     params.require(:memo).permit(:text).merge(user_id: current_user.id)
   end
-
-
-
 end
