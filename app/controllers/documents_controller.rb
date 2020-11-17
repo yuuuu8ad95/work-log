@@ -1,6 +1,6 @@
 class DocumentsController < ApplicationController
   before_action :move_to_index, except: [:index, :show]
-  before_action :authenticate_user!, except: [:index]
+  before_action :authenticate_user!
   before_action :set_document, only: [:edit, :update, :destroy]
 
   def index
