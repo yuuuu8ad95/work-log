@@ -1,7 +1,8 @@
 .document-btn {
   width: 120px;
-  background: skyblue;
+  background: rgb(169, 218, 236);
   text-align: center;
+  border: 2px solid rgb(7, 92, 153);
   border-radius: 10%;
   bottom: 400px;
   right: 32px;
@@ -10,7 +11,7 @@
 }
 
 .document-btn-text {
-  color: rgb(91, 84, 155);
+  color: rgb(36, 35, 49);
   display: block;
   font-size: 18px;
   text-decoration: none;

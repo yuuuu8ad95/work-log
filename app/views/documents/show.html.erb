@@ -14,7 +14,7 @@
     <table class='detail-document'>
       <tr>
         <th class="detail-contents-title">内容</th>
-        <th class="detail-contents"><%= @document.content %></th>
+        <th class="detail-contents"><%= simple_format(@document.content) %></th>
       </tr>
       <tr>
         <th class="detail-title">タグ</th>

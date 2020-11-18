@@ -29,6 +29,7 @@ class DocumentsController < ApplicationController
   end
 
   def edit
+    @tag_list = @document.tags.pluck(:name)
   end
 
   def update
@@ -63,7 +64,9 @@ class DocumentsController < ApplicationController
   end
 
   def document_params
-    params.permit(:title, :content, :deadline).merge(user_id: current_user.id)
+    params.permit(
+      :create_day, :title, :content, :deadline, :name, :tag_ids
+    ).merge(user_id: current_user.id)
   end
 
   def move_to_index

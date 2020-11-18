@@ -27,16 +27,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding : 10px;
+  padding: 10px;
 }
 
 .user-text-wrap {
-  font-size: 2vh;
+  font-size: 15px;
   color: black;
 }
 
 .user-content  {
-  font-size: 3vh;
+  font-size: 20px;
   color: black;
   border-bottom: 1px solid rgb(77, 77, 177);
   width: 60vh;
