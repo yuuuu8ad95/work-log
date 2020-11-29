@@ -3,7 +3,7 @@
     <% if user_signed_in? && current_user.id == @user.id %>
     <li><%= link_to "編集する", edit_user_path(current_user), class: "user-edit-link" %></li>
     <% end %>
-    <li><%= link_to "メモ一覧", "/users/#{@user.id}/memos", class: "user-memo-link" %>
+    <li><%= link_to "メモ一覧", "/users/#{@user.id}/memos", class: "user-memo-link" %></li>
   </ul>
 
     <div class="user-memo-place">

@@ -15,7 +15,7 @@
     <th class='user-title'>名前</th>
     <th class='user-title'>ニックネーム</th>
     <th class='user-title'>担当</th>
-    <th class='user-title'>プロフィール</th>
+    <th class='user-title'>表示</th>
   </tr>
   <tbody>
   <% @user.each do |user| %>
@@ -23,10 +23,18 @@
     <td class='user-contents'><%= user.family_name%> <%= user.first_name%></td>
     <td class='user-contents'><%= user.nickname%></td>
     <td class='user-contents'><%= user.department.name %></td>
-    <td class='user-contents'><%= link_to "表示", "/users/#{user.id}" %></td>
+    <td class='user-contents'>
+    <%= link_to "/users/#{user.id}" do %>
+     <% if user.image.present? %>
+            <%= image_tag user.image, class:"user-image-document" %>
+     <% else %>
+            <%= image_tag "no_image.png", class:"user-image-document" %>
+      <% end %>
+    <% end %>
+    </td>
   </tr>
   <% end %>
   </tbody>
   </table>
 </div>
-<%= render "shared/footer.second" %>
+<%= render "shared/footer" %>

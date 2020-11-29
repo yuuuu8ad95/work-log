@@ -50,7 +50,7 @@
       </tr>
       <% if user_signed_in? && current_user.id == @document.user.id %>
       <tr>
-        <th class='detail-title'>管理</th>
+        <th class='detail-title'></th>
         <th class='detail-content-edit'><%= link_to "編集", edit_document_path(@document.id), method: :get %><%= link_to "削除", document_path(@document.id), method: :delete %></th>
       </tr>
       <% end %>

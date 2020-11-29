@@ -6,10 +6,8 @@
 
 .new-document-detail {
   font-size: 30px;
-  color: #666;
-  color: #666;
-  text-align: center;
-  border-bottom: 2px solid rgb(78, 78, 219);
+  color: rgb(26, 22, 22);
+  border-bottom: 6px double #000;
   margin-bottom: 10px;
 }
 
@@ -33,7 +31,7 @@
 }
 
 .detail-contents, .detail-content ,.detail-content-edit{
-  min-width:500px;
+  min-width:70vw;
 }
 
 .detail-contents {
